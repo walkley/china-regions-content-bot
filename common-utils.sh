@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# aws-cn-common-utils.sh - Common utility functions for AWS China content conversion tools
+# common-utils.sh - Common utility functions
 # Author: Amazon Q
 
 # ANSI color codes for terminal output

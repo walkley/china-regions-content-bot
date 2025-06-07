@@ -1,120 +1,99 @@
-# AWS 中国区内容转换工具
+# AWS 中国区内容验证工具
 
-这个项目提供了一套简单工具，用于验证并转换AWS海外区域的技术内容到AWS中国区。通过自动化分析和验证，帮助用户判断AWS全球区域的技术内容是否适用于中国区，并提供必要的转换建议。
+这个项目提供了一个简单的工具，用于验证 AWS 全球区域的技术内容是否适用于 AWS 中国区。通过自动化分析和验证，帮助用户判断 AWS 全球区域的技术内容是否适合在中国区使用，并提供必要的适配建议。
 
 ## 项目背景
 
-AWS中国区与AWS全球区域在服务可用性、功能特性和配置要求等方面存在差异。将AWS全球区域的技术内容（如博客、文档、解决方案）适配到中国区通常需要大量的手动验证和修改工作。本项目旨在通过自动化工具简化这一过程，提高内容转换的效率和准确性。
+AWS 中国区与 AWS 全球区域在服务可用性、功能特性和配置要求等方面存在差异。将 AWS 全球区域的技术内容（如博客、文档、解决方案）适配到中国区通常需要大量的手动验证和修改工作。本项目旨在通过自动化工具简化这一过程，提高内容验证的效率和准确性。
 
 ## 工具说明
 
-### 1. 博客转换工具 (aws-cn-content-convert.sh)
-
-将网页博客内容转换为Markdown格式，便于后续分析和处理。
+该工具可以一步完成内容分析、服务验证和适用性评估，直接提供内容适用性评估结果。
 
 ```bash
-./aws-cn-tool.sh convert -u <博客URL> -o <输出文件路径>
+./aws-cn-tool.sh -u <博客URL> [-r <区域>] [-p <配置文件>]
 ```
 
-### 2. 内容分析工具 (aws-cn-content-analyze.sh)
-
-分析Markdown内容，识别其中涉及的AWS服务、资源和配置。
-
-```bash
-./aws-cn-tool.sh analyze -f <Markdown文件> -o <输出JSON文件>
-```
-
-### 3. 服务验证工具 (aws-cn-service-validate.sh)
-
-生成交互式脚本，验证识别出的AWS服务在中国区的可用性。
-
-```bash
-./aws-cn-tool.sh validate -i <服务JSON文件> -o <输出脚本文件> -r <区域> -p <配置文件>
-```
-
-### 4. 适用性检查工具 (aws-cn-content-evaluate.sh)
-
-评估内容是否适用于AWS中国区，并生成详细报告。
-
-```bash
-./aws-cn-tool.sh evaluate -i <验证结果JSON> -o <适用性报告JSON> -t <阈值>
-```
+参数说明：
+- `-u, --url`：要验证的博客或文档 URL（必需）
+- `-r, --region`：AWS 中国区域（默认：cn-northwest-1）
+- `-p, --profile`：AWS CLI 配置文件（默认：cn）
+- `-h, --help`：显示帮助信息
 
 ## 使用流程
 
-1. **设置环境**：
+1. **设置 AWS 中国区凭证**：
    ```bash
-   ./aws-cn-tool.sh setup
+   aws configure --profile cn
+   ```
+   输入您的 AWS 中国区访问密钥、秘密密钥和区域（cn-north-1 或 cn-northwest-1）
+
+2. **运行验证工具**：
+   ```bash
+   ./aws-cn-tool.sh -u https://aws.amazon.com/blogs/aws/some-article
    ```
 
-2. **转换博客内容**：
-   ```bash
-   ./aws-cn-tool.sh convert -u https://aws.amazon.com/blogs/aws/some-article -o ./data/aws-article.md
-   ```
+3. **查看验证结果**：
+   工具会自动完成以下步骤：
+   - 将网页内容转换为 Markdown 格式
+   - 分析内容中涉及的 AWS 服务
+   - 验证这些服务在中国区的可用性
+   - 评估内容的整体适用性
+   - 生成详细的 JSON 报告
 
-3. **分析内容中的AWS服务**：
-   ```bash
-   ./aws-cn-tool.sh analyze -f ./data/aws-article.md -o ./data/aws-article-services.json
-   ```
+## 工作原理
 
-4. **生成服务验证脚本**：
-   ```bash
-   ./aws-cn-tool.sh validate -i ./data/aws-article-services.json -o ./data/aws-article-validation.sh
-   ```
+该工具使用 Amazon Q CLI 结合自定义提示词来完成整个验证流程：
 
-5. **运行验证脚本并保存结果**：
-   ```bash
-   ./data/aws-article-validation.sh > ./data/aws-article-validation-results.json
-   ```
-
-6. **评估内容适用性**：
-   ```bash
-   ./aws-cn-tool.sh evaluate -i ./data/aws-article-validation-results.json -o ./data/aws-article-applicability.json
-   ```
+1. 首先使用 `convert_to_markdown` 工具将网页内容转换为 Markdown 格式
+2. 然后使用自定义提示词分析内容中涉及的 AWS 服务
+3. 对每个服务进行可用性验证：
+   - 检查是否在不可用服务列表中
+   - 使用 AWS CLI 验证服务在中国区的可用性
+4. 计算整体适用性评分并生成报告
 
 ## 项目结构
 
 ```
 .
-├── aws-cn-tool.sh          # 主入口脚本
-├── bin/                    # 可执行脚本目录
-│   ├── aws-cn-common-utils.sh       # 通用工具函数
-│   ├── aws-cn-content-convert.sh    # 博客转换脚本
-│   ├── aws-cn-content-analyze.sh    # 内容分析脚本
-│   ├── aws-cn-service-validate.sh   # 服务验证脚本
-│   ├── aws-cn-content-evaluate.sh   # 适用性检查脚本
-│   └── aws-cn-setup.sh              # 环境设置脚本
-├── data/                   # 数据目录（存放所有生成的文件）
-└── VERSION                 # 版本信息
+├── aws-cn-tool.sh           # 主脚本
+├── bin/                     # 工具脚本目录
+│   └── aws-cn-common-utils.sh  # 通用工具函数
+├── data/                    # 数据目录（存放生成的文件）
+├── china-content-validation.txt  # 验证提示词模板
+└── unavailable_services.txt      # 中国区不可用服务列表
 ```
 
 ## 依赖项
 
 - Amazon Q CLI (`q`)
 - AWS CLI (`aws`)
-- jq (可选，用于JSON处理)
+- jq（可选，用于 JSON 处理）
 - Bash 4.0+
 
 ## 示例
 
-### 验证EKS博客文章
+### 验证 EKS 博客文章
 
 ```bash
-# 设置环境
-./aws-cn-tool.sh setup
+# 设置 AWS 中国区凭证
+aws configure --profile cn
 
-# 转换EKS博客
-./aws-cn-tool.sh convert -u https://aws.amazon.com/blogs/containers/ensuring-fair-bandwidth-allocation-for-amazon-eks-workloads/ -o ./data/eks-bandwidth.md
+# 验证 EKS 博客
+./aws-cn-tool.sh -u https://aws.amazon.com/blogs/containers/ensuring-fair-bandwidth-allocation-for-amazon-eks-workloads/
+```
 
-# 分析内容
-./aws-cn-tool.sh analyze -f ./data/eks-bandwidth.md -o ./data/eks-services.json
+输出示例：
+```
+[INFO] Step 1: Converting blog content to Markdown...
+[SUCCESS] Blog content has been converted to Markdown format
+[INFO] Step 2: Analyzing content and validating service availability...
+[INFO] Analyzing content and validating service availability, this may take a few minutes...
+[SUCCESS] Analysis complete! Results saved to: ./data/ensuring-fair-bandwidth-allocation-for-amazon-eks-workloads_result.json
 
-# 生成验证脚本
-./aws-cn-tool.sh validate -i ./data/eks-services.json -o ./data/eks-validation.sh
+===== Analysis Result Summary =====
+Applicability Rating: high
+Reason: All core services are available in China regions, no major modifications required
 
-# 运行验证脚本
-./data/eks-validation.sh > ./data/eks-validation-results.json
-
-# 评估适用性
-./aws-cn-tool.sh evaluate -i ./data/eks-validation-results.json -o ./data/eks-applicability.json
+[INFO] Complete results saved to: ./data/ensuring-fair-bandwidth-allocation-for-amazon-eks-workloads_result.json
 ```

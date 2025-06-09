@@ -22,9 +22,15 @@ check_required_dependencies() {
     local missing_deps=0
     
     # Check for required commands
-    for cmd in "q" "aws" "jq"; do
+    for cmd in "python3" "pip3" "q" "aws" "jq"; do
         if ! command_exists "$cmd"; then
-            if [ "$cmd" = "q" ]; then
+            if [ "$cmd" = "python3" ]; then
+                log_error "Python 3 is not installed or not in PATH"
+                log_info "Please install Python 3: https://www.python.org/downloads/"
+            elif [ "$cmd" = "pip3" ]; then
+                log_error "pip3 is not installed or not in PATH"
+                log_info "Please install pip3 for Python package management"
+            elif [ "$cmd" = "q" ]; then
                 log_error "Amazon Q CLI (q) is not installed or not in PATH"
                 log_info "Please install Amazon Q CLI to use these tools"
             elif [ "$cmd" = "aws" ]; then
@@ -47,6 +53,44 @@ check_required_dependencies() {
     fi
     
     log_success "All required dependencies are installed"
+}
+
+# Setup Python virtual environment
+setup_python_venv() {
+    log_info "Setting up Python virtual environment..."
+    
+    local venv_path="$(dirname "$0")/../venv"
+    
+    if [ ! -d "$venv_path" ]; then
+        log_info "Creating virtual environment..."
+        python3 -m venv "$venv_path"
+        if [ $? -ne 0 ]; then
+            log_error "Failed to create virtual environment"
+            exit 1
+        fi
+    else
+        log_info "Virtual environment already exists"
+    fi
+    
+    # Activate virtual environment and install requirements
+    log_info "Installing Python packages..."
+    source "$venv_path/bin/activate"
+    
+    local requirements_file="$(dirname "$0")/../requirements.txt"
+    if [ -f "$requirements_file" ]; then
+        pip install --upgrade pip
+        pip install -r "$requirements_file"
+        if [ $? -ne 0 ]; then
+            log_error "Failed to install Python packages"
+            exit 1
+        fi
+        log_success "Python packages installed successfully"
+    else
+        log_warning "requirements.txt not found, skipping package installation"
+    fi
+    
+    deactivate
+    log_success "Python virtual environment setup complete"
 }
 
 # Check AWS configuration
@@ -76,6 +120,7 @@ set_permissions() {
     log_info "Setting executable permissions..."
     
     chmod +x $(dirname "$0")/aws-cn-*.sh
+    chmod +x $(dirname "$0")/aws-cn-*.py
     
     log_success "Permissions set"
 }
@@ -98,6 +143,7 @@ main() {
     
     check_required_dependencies
     create_directories
+    setup_python_venv
     set_permissions
     check_aws_config
     create_version_file
@@ -107,10 +153,11 @@ main() {
     log_success "Setup complete!"
     echo
     log_info "You can now use the following commands:"
-    echo "  ./bin/aws-cn-content-convert.sh - Convert blog content to Markdown"
-    echo "  ./bin/aws-cn-content-analyze.sh - Analyze content for AWS services"
-    echo "  ./bin/aws-cn-service-validate.sh - Generate service validation scripts"
-    echo "  ./bin/aws-cn-content-evaluate.sh - Evaluate content applicability"
+    echo "  ./aws-cn-tool.sh convert -u <URL> -o <output.md> - Convert blog content to Markdown"
+    echo "  ./aws-cn-tool.sh analyze - Analyze content for AWS services"
+    echo "  ./aws-cn-tool.sh validate - Generate service validation scripts"
+    echo "  ./aws-cn-tool.sh evaluate - Evaluate content applicability"
+    echo "  ./bin/aws-cn-content-convert.py - Direct Python script usage (requires venv activation)"
     echo "====================================================="
 }
 

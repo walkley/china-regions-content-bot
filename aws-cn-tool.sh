@@ -11,11 +11,11 @@ show_help() {
     echo "用法: $0 <命令> [选项]"
     echo
     echo "可用命令:"
-    echo "  convert   - 将博客转换为Markdown"
+    echo "  convert   - 将博客转换为Markdown (Python脚本)"
     echo "  analyze   - 分析内容中的AWS服务"
     echo "  validate  - 验证服务在中国区的可用性"
     echo "  evaluate  - 评估内容适用性"
-    echo "  setup     - 设置环境"
+    echo "  setup     - 设置环境和Python虚拟环境"
     echo
     echo "运行 '$0 <命令> --help' 获取特定命令的帮助"
 }
@@ -30,7 +30,16 @@ fi
 case "$1" in
     convert)
         shift
-        ./bin/aws-cn-content-convert.sh "$@"
+        # Activate virtual environment and run Python script
+        VENV_PATH="./venv"
+        if [ -d "$VENV_PATH" ]; then
+            source "$VENV_PATH/bin/activate"
+            python3 ./bin/aws-cn-content-convert.py "$@"
+            deactivate
+        else
+            log_error "Virtual environment not found. Please run: $0 setup"
+            exit 1
+        fi
         ;;
     analyze)
         shift

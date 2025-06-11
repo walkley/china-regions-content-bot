@@ -120,7 +120,7 @@ EOF
 
     # Execute project validation
     log_info "Analyzing and validating GitHub project, this may take some time..."
-    echo -e "$project_validation_prompt" | q chat --no-interactive --trust-tools=use_aws,fs_write,fs_read,execute_bash > /dev/null
+    echo -e "$project_validation_prompt" | q chat --no-interactive --trust-all-tools
 
     # Check if result file was generated
     if [ ! -f "$deep_result_file" ]; then

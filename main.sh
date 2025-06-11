@@ -22,6 +22,7 @@ show_help() {
     echo "  -p, --profile   AWS CLI profile (default: cn)"
     echo "  -d, --deep      Enable deep validation mode (subject to feasibility gate)"
     echo "  -m, --max-cost  Maximum cost limit for deep validation in USD (default: 10)"
+    echo "  -f, --force     Force regeneration of Markdown file even if it exists"
     echo "  -h, --help      Display this help information"
     echo
     echo "Validation Modes:"
@@ -36,6 +37,7 @@ show_help() {
     echo "Examples:"
     echo "  $0 -u https://aws.amazon.com/blogs/aws/some-article -r cn-north-1 -p cn"
     echo "  $0 -u https://aws.amazon.com/blogs/aws/some-article -d -m 5"
+    echo "  $0 -u https://aws.amazon.com/blogs/aws/some-article -f"
 }
 
 # Default values
@@ -45,6 +47,7 @@ PROFILE="cn"
 TEMP_DIR="./data/temp"
 DEEP_MODE=false
 MAX_COST=10
+FORCE_REGENERATE=false
 
 # Parse command line arguments
 while [[ $# -gt 0 ]]; do
@@ -70,6 +73,10 @@ while [[ $# -gt 0 ]]; do
             MAX_COST="$2"
             shift 2
             ;;
+        -f|--force)
+            FORCE_REGENERATE=true
+            shift
+            ;;
         -h|--help)
             show_help
             exit 0
@@ -90,22 +97,41 @@ if [ -z "$URL" ]; then
 fi
 
 # Create temporary and results directories
-mkdir -p "$TEMP_DIR"
 mkdir -p "./data"
-TEMP_MD="$TEMP_DIR/content.md"
+MD_FILE="./data/$(basename "$URL" | sed 's/[^a-zA-Z0-9]/_/g').md"
 RESULT_FILE="./data/$(basename "$URL" | sed 's/[^a-zA-Z0-9]/_/g')_result.json"
 DEEP_RESULT_FILE="./data/$(basename "$URL" | sed 's/[^a-zA-Z0-9]/_/g')_deep_result.json"
 
 # Step 1: Convert blog content to Markdown
-convert_content_to_markdown "$URL" "$TEMP_MD"
-if [ $? -ne 0 ]; then
-    exit 1
+if [ -f "$MD_FILE" ] && [ "$FORCE_REGENERATE" != "true" ]; then
+    log_info "Markdown file already exists: $MD_FILE"
+    log_info "Skipping conversion. Use -f/--force flag to regenerate."
+else
+    if [ "$FORCE_REGENERATE" = "true" ] && [ -f "$MD_FILE" ]; then
+        log_info "Force regeneration requested, removing existing file: $MD_FILE"
+        rm -f "$MD_FILE"
+    fi
+    
+    convert_content_to_markdown "$URL" "$MD_FILE"
+    if [ $? -ne 0 ]; then
+        exit 1
+    fi
 fi
 
 # Step 2: Perform basic validation
-perform_basic_validation "$TEMP_MD" "$RESULT_FILE" "$REGION" "$PROFILE"
-if [ $? -ne 0 ]; then
-    exit 1
+if [ -f "$RESULT_FILE" ] && [ "$FORCE_REGENERATE" != "true" ]; then
+    log_info "Basic validation result file already exists: $RESULT_FILE"
+    log_info "Skipping basic validation. Use -f/--force flag to regenerate."
+else
+    if [ "$FORCE_REGENERATE" = "true" ] && [ -f "$RESULT_FILE" ]; then
+        log_info "Force regeneration requested, removing existing result file: $RESULT_FILE"
+        rm -f "$RESULT_FILE"
+    fi
+    
+    perform_basic_validation "$MD_FILE" "$RESULT_FILE" "$REGION" "$PROFILE"
+    if [ $? -ne 0 ]; then
+        exit 1
+    fi
 fi
 
 # Display basic validation results
@@ -114,7 +140,7 @@ display_basic_results "$RESULT_FILE"
 # Step 3: Perform deep validation if requested and feasible
 if [ "$DEEP_MODE" = true ]; then
     log_info "🔍 Deep validation requested - checking feasibility gate..."
-    if perform_deep_validation "$TEMP_MD" "$RESULT_FILE" "$DEEP_RESULT_FILE" "$REGION" "$PROFILE" "$MAX_COST" "$TEMP_DIR"; then
+    if perform_deep_validation "$MD_FILE" "$RESULT_FILE" "$DEEP_RESULT_FILE" "$REGION" "$PROFILE" "$MAX_COST" "$TEMP_DIR"; then
         log_success "✅ Deep validation completed successfully!"
     else
         log_warning "⚠️  Deep validation was blocked or failed"
@@ -124,8 +150,5 @@ else
     log_info "Deep validation not requested. Use -d flag to enable deep validation."
     log_info "💡 Note: Deep validation is subject to intelligent feasibility gating"
 fi
-
-# Clean up temporary files
-rm -f "$TEMP_MD"
 
 exit 0

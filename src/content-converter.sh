@@ -29,7 +29,7 @@ Processing steps:
 Output requirements: Clean Markdown file containing only the main article content in its original language"
 
     # Execute conversion
-    echo -e "$convert_prompt" | q chat --no-interactive --trust-tools=fs_write,fs_read,markitdown_mcp___convert_to_markdown
+    echo -e "$convert_prompt" | q chat --no-interactive --trust-tools=fs_write,fs_read,execute_bash,markitdown_mcp___convert_to_markdown
 
     # Check if Markdown file was generated
     if [ ! -f "$output_file" ]; then

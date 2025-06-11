@@ -13,6 +13,7 @@ source src/tutorial-validator.sh
 # Function to determine content type
 determine_content_type() {
     local result_file="$1"
+    local result_var_name="$2"
     
     # Extract GitHub project URL and procedures from basic validation result
     if command_exists jq; then
@@ -29,12 +30,11 @@ determine_content_type() {
     fi
     
     # Determine content type
-    local content_type=""
     if [ -n "$github_project" ] && [ "$github_project" != "null" ]; then
-        content_type="project"
+        eval "$result_var_name='project'"
         log_info "Content type detected: Project (GitHub repository found)"
     elif [ "$has_procedures" = "true" ]; then
-        content_type="tutorial"
+        eval "$result_var_name='tutorial'"
         log_info "Content type detected: Tutorial (Step-by-step procedures found)"
     else
         log_warning "Could not determine content type automatically."
@@ -44,16 +44,15 @@ determine_content_type() {
         read -p "Enter choice (1/2): " type_choice
         
         if [ "$type_choice" = "1" ]; then
-            content_type="project"
+            eval "$result_var_name='project'"
         elif [ "$type_choice" = "2" ]; then
-            content_type="tutorial"
+            eval "$result_var_name='tutorial'"
         else
             log_error "Invalid choice. Exiting."
             return 1
         fi
     fi
     
-    echo "$content_type"
     return 0
 }
 
@@ -115,8 +114,9 @@ perform_deep_validation() {
     fi
     
     # Determine content type
-    local content_type=$(determine_content_type "$basic_result_file")
-    if [ -z "$content_type" ]; then
+    local content_type
+    determine_content_type "$basic_result_file" content_type
+    if [ $? -ne 0 ]; then
         return 1
     fi
     

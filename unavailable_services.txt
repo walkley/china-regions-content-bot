@@ -14,54 +14,36 @@ Amazon Macie
 Amazon Managed Blockchain
 Amazon Mechanical Turk
 Amazon Pinpoint
-Amazon Polly
-Amazon QuickSight
+Amazon Q Business
+Amazon Q Developer
 Amazon Rekognition
 Amazon SageMaker Ground Truth
 Amazon Textract
-Amazon Transcribe
 Amazon Translate
 
 # AWS服务
 AWS Amplify
-AWS AppSync
-AWS Backup
 AWS Chatbot
 AWS Cloud9
 AWS CodeArtifact
-AWS CodeCommit
 AWS CodeGuru
 AWS CodeStar
-AWS Compute Optimizer
 AWS Control Tower
 AWS Data Exchange
-AWS DataSync
 AWS DeepLens
 AWS DeepRacer
 AWS Elemental MediaConnect
-AWS Elemental MediaConvert
 AWS Elemental MediaLive
 AWS Elemental MediaPackage
 AWS Elemental MediaStore
 AWS Elemental MediaTailor
-AWS Fargate
 AWS Global Accelerator
 AWS IoT 1-Click
-AWS IoT Analytics
-AWS IoT Events
-AWS IoT SiteWise
-AWS Lake Formation
-AWS License Manager
 AWS Managed Services
 AWS Migration Hub
 AWS Outposts
 AWS RoboMaker
-AWS Security Hub
-AWS Service Catalog
 AWS Shield
 AWS Snowball
 AWS Snowmobile
-AWS Transfer Family
-AWS WAF
 AWS Well-Architected Tool
-AWS X-Ray

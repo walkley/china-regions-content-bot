@@ -35,7 +35,7 @@ venv\Scripts\activate
 source venv/bin/activate
 
 # 安装依赖
-pip install -r requirements.txt
+pip install -e .
 ```
 
 ### AWS中国区域凭证设置
@@ -51,62 +51,55 @@ aws configure --profile cn
 ### 基本用法
 
 ```bash
-# 仅基本验证
-python main.py -u <blog-url> -r <region> -p <profile>
-
-# 使用深度验证
-python main.py -u <blog-url> -d -m <max-cost>
-
-# 强制重新生成缓存文件
-python main.py -u <blog-url> -f
+# 验证内容
+python main.py -u <content-url> -r <region> -p <profile>
 ```
 
 ### 参数
 
-- `-u, --url`: 博客URL（必需）
+- `-u, --url`: 内容URL（必需）
 - `-r, --region`: AWS中国区域（默认：cn-northwest-1）
 - `-p, --profile`: AWS CLI配置文件（默认：cn）
-- `-d, --deep`: 启用深度验证模式
-- `-m, --max-cost`: 深度验证的最大成本限制（美元，默认：10）
-- `-f, --force`: 强制重新生成缓存文件
-- `-t, --content-type`: 深度验证的内容类型（如果未指定则自动检测）
-- `--temp-dir`: 临时文件目录（默认：./data/temp）
 - `--log-level`: 日志级别（默认：INFO）
-- `--check-dependencies`: 检查所需依赖项并退出
-- `--cleanup-only`: 仅执行验证资源清理并退出
-
-## 环境变量
-
-该工具可以通过`.env`文件中的环境变量进行配置：
-
-- `AWS_VALIDATOR_URL`: 要验证的内容URL
-- `AWS_VALIDATOR_REGION`: AWS中国区域（默认：cn-northwest-1）
-- `AWS_VALIDATOR_PROFILE`: AWS CLI配置文件（默认：cn）
-- `AWS_VALIDATOR_DEEP_MODE`: 启用深度验证模式（true/false）
-- `AWS_VALIDATOR_MAX_COST`: 深度验证的最大成本限制（美元）
-- `AWS_VALIDATOR_FORCE_REGENERATE`: 强制重新生成缓存文件（true/false）
-- `AWS_VALIDATOR_CONTENT_TYPE`: 深度验证的内容类型（project/tutorial）
-- `AWS_VALIDATOR_TEMP_DIR`: 临时文件目录
-- `AWS_VALIDATOR_LOG_LEVEL`: 日志级别（DEBUG/INFO/WARNING/ERROR/CRITICAL）
-
-参见`.env.example`获取模板。
 
 ## 项目结构
 
 ```
 .
 ├── main.py                  # 主入口脚本
-├── requirements.txt         # Python依赖
-├── .env.example             # 环境变量示例
-├── data/                    # 生成的数据目录
-│   ├── unavailable_services.txt # 中国区域不可用服务列表
-│   └── temp/                # 临时文件目录
+├── converter.py            # URL内容转Markdown转换器
+├── pyproject.toml          # 项目配置和依赖
+├── README.md               # 项目说明文档
+├── unavailable_services.txt # 中国区域不可用服务列表
+├── data/                   # 生成的数据目录
+└── temp/                   # 临时文件目录
 ```
+
+## 工作流程
+
+1. 将URL内容转换为Markdown格式
+2. 分析内容中使用的AWS服务
+3. 检查服务在中国区域的可用性
+4. 生成验证报告
+5. 对可行内容执行深度验证（如果启用）
+
+## 验证报告
+
+验证报告包含以下内容：
+
+- 验证概览（内容标题、验证时间、目标区域、验证ID）
+- 基础验证结果（可行性评估、服务分析）
+- 深入验证结果（如果执行）
+- 最终结论和建议
 
 ## 缓存机制
 
-该工具实现了文件缓存机制以提高性能：
+该工具实现了文件存储机制以保存验证过程和结果：
 
-- 转换后的Markdown文件缓存在`./data/`目录中
-- 基本验证结果缓存为JSON文件
-- 使用`-f`标志强制重新生成缓存文件
+- 每次验证会生成唯一验证ID（validation_id），用于标识验证会话
+- 所有生成的文件都存储在`./data/`目录中，包括：
+  - 转换后的Markdown文件：`{文件名}_{validation_id}.md`
+  - 验证结果报告：`{文件名}_result_{validation_id}.md`
+  - 验证过程日志：`{文件名}_{validation_id}.log`
+- 文件名基于URL生成，确保唯一性和可追溯性
+- 这些文件可用于后续分析、审计和问题排查

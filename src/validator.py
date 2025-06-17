@@ -24,7 +24,7 @@ def run_q_chat(prompt: str, trust_tools: str, model: str = "claude-4-sonnet", lo
     Returns:
         Dictionary containing execution results
     """
-    cmd = ["q", "chat", f"--model={model}"]
+    cmd = ["q", "chat", "--no-interactive", f"--model={model}"]
     if trust_tools:
         cmd.append(f"--trust-tools={trust_tools}")
     

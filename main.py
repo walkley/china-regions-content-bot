@@ -15,8 +15,8 @@ import uuid
 from pathlib import Path
 
 # Import functions from converter.py and validator.py
-from converter import convert_url_to_markdown
-from validator import validate_content
+from src.converter import convert_url_to_markdown
+from src.validator import validate_content
 
 # Set up logging
 def setup_logging(log_level="INFO"):
@@ -88,7 +88,7 @@ def main():
         log_file = f"./data/{safe_filename}_{validation_id}.log"
         result = validate_content(markdown_file, result_file, log_file, validation_id, config.region, config.profile)
         
-        logger.info(f"{'Succeeded' if result.success else 'Failed!'}")
+        logger.info(f"{'Succeeded' if result.get('success') else 'Failed!'}")
         return 0
     
     except KeyboardInterrupt:

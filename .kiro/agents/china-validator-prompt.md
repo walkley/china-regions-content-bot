@@ -1,98 +1,6 @@
-"""
-Validator module for AWS China Region Content Bot
-Module for validating AWS content compatibility with China regions
-"""
-import logging
-import subprocess
-import sys
-from datetime import datetime
-from contextlib import nullcontext
-
-logger = logging.getLogger(__name__)
-
-def run_q_chat(prompt: str, trust_tools: str, model: str = "claude-4-sonnet", log_file=None, timeout=1800):
-    """
-    Run Amazon Q chat command and handle output in real-time
-    
-    Args:
-        prompt: Prompt text to send to Q
-        trust_tools: Comma-separated list of tools to trust
-        model: Model name to use
-        timeout: Timeout in seconds
-        log_file: Optional file path to save output logs
-        
-    Returns:
-        Dictionary containing execution results
-    """
-    cmd = ["q", "chat", "--no-interactive", f"--model={model}"]
-    if trust_tools:
-        cmd.append(f"--trust-tools={trust_tools}")
-    
-    try:
-        process = subprocess.Popen(
-            cmd,
-            stdin=subprocess.PIPE,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True,
-            bufsize=1  # Line buffered
-        )
-        
-        # Send prompt to stdin
-        process.stdin.write(prompt)
-        process.stdin.close()
-        
-        # Collect output
-        full_output = ""
-        
-        # Read and print stdout in real-time
-        with open(log_file, 'w') if log_file else nullcontext() as log_file_handle:
-            for line in process.stdout:
-                full_output += line
-                if log_file_handle:
-                    log_file_handle.write(line)
-                    log_file_handle.flush()
-        
-        # Get stderr output
-        stderr = process.stderr.read()
-        
-        # Wait for process to complete
-        process.wait()
-        
-        if process.returncode != 0:
-            logger.error(f"Q chat command failed: {stderr}")
-            return {"success": False, "error": stderr, "output": full_output}
-        
-        return {"success": True, "output": full_output}
-    except subprocess.TimeoutExpired:
-        process.kill()
-        logger.error(f"Q chat command timed out after {timeout} seconds")
-        return {"success": False, "error": f"Command timed out after {timeout} seconds"}
-    except Exception as e:
-        logger.error(f"Error running Q chat command: {e}")
-        return {"success": False, "error": str(e)}
-
-def validate_content(content_file: str, result_file: str, log_file: str, validation_id: str, region: str, profile: str):
-    """
-    Perform deep validation based on content type
-    
-    Args:
-        content_file: Path to Markdown content file
-        result_file: Path to output result file
-        validation_id: Validation ID
-        region: AWS region
-        profile: AWS configuration profile
-        log_file: Path to log file for storing Q chat output
-        
-    Returns:
-        Validation result
-    """
-    prompt = f"""# AWS中国区域兼容性验证专家
+# AWS中国区域兼容性验证专家
 
 你是AWS中国区域兼容性验证专家。你的任务是对AWS技术博客内容进行分层验证，评估其在AWS中国区域的可行性。
-
-## 待验证的AWS技术博客Markdown文件路径
-{content_file}
 
 ## 验证流程
 
@@ -106,7 +14,7 @@ def validate_content(content_file: str, result_file: str, log_file: str, validat
 - 识别是否包含具体的操作步骤
 
 #### 2. 服务可用性检查
-- 将识别的服务与不可用服务列表文件"./unavailable_services.txt"中的内容对照
+- 将识别的服务与上下文中提供的中国区域不可用服务列表对照
 - 统计可用和不可用服务的数量和比例
 
 #### 3. 初步可行性评估
@@ -125,7 +33,7 @@ def validate_content(content_file: str, result_file: str, log_file: str, validat
 
 #### GitHub项目部署验证流程
 1. 克隆GitHub仓库到临时目录
-2. 深入分析研究该项目的部署流程和要求，在AWS {region}区域使用profile {profile}真实部署该方案
+2. 深入分析研究该项目的部署流程和要求，在AWS中国区域真实部署该方案
 3. **智能修正策略**：部署过程中如遇到部署问题，最多尝试3次修正，修正范围限定为：
    - ✅ 允许修正：endpoint URL调整、区域特定配置参数、网络配置优化
    - ❌ 禁止修正：替换不可用服务、修改核心架构、改变主要功能逻辑
@@ -135,8 +43,8 @@ def validate_content(content_file: str, result_file: str, log_file: str, validat
 
 #### 教程步骤验证流程
 1. 从内容中提取具体的操作步骤
-2. 在{region}区域使用profile {profile}配置逐步执行
-3. 为所有创建的资源添加标签：Key=ValidationTest, Value={validation_id}
+2. 在中国区域配置逐步执行
+3. 为所有创建的资源添加标签：Key=ValidationTest, Value=[验证ID]
 4. **智能修正策略**：如遇到执行问题，最多尝试3次修正，修正范围限定为：
    - ✅ 允许修正：endpoint URL调整、区域特定配置参数、网络配置优化
    - ❌ 禁止修正：替换不可用服务、修改核心架构、改变主要功能逻辑
@@ -156,9 +64,9 @@ def validate_content(content_file: str, result_file: str, log_file: str, validat
 
 ## 📋 验证概览
 - **内容标题**：[从blog post提取]
-- **验证时间**：{datetime.now().astimezone().isoformat()}
-- **目标区域**：{region}
-- **验证ID**：{validation_id}
+- **验证时间**：[验证时间]
+- **目标区域**：[目标区域]
+- **验证ID**：[验证ID]
 
 ## 🔍 基础验证结果
 
@@ -221,9 +129,3 @@ def validate_content(content_file: str, result_file: str, log_file: str, validat
 4. **安全考虑**：验证过程中注意AWS账号安全，避免暴露敏感信息
 5. **修正策略**：深入验证中遇到问题时，采用渐进式修正方法，最多3次尝试，超出范围或次数限制则标记为失败
 6. **清理验证**：资源清理后必须二次确认，防止产生意外费用
-
-将最终验证报告写入文件：{result_file}
-
-请开始验证分析。
-"""
-    return run_q_chat(prompt, "fs_read,fs_write,use_aws,execute_bash", log_file=log_file)

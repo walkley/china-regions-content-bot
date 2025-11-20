@@ -1,0 +1,49 @@
+# AWS中国区域不可用服务列表
+# 最后更新: 2025-06-10
+
+# Amazon服务
+Amazon Bedrock
+Amazon Chime
+Amazon Connect
+Amazon Detective
+Amazon Forecast
+Amazon Honeycode
+Amazon Kendra
+Amazon Lex
+Amazon Macie
+Amazon Managed Blockchain
+Amazon Mechanical Turk
+Amazon Pinpoint
+Amazon Q Business
+Amazon Q Developer
+Amazon Rekognition
+Amazon SageMaker Ground Truth
+Amazon Textract
+Amazon Translate
+
+# AWS服务
+AWS Amplify
+AWS Chatbot
+AWS Cloud9
+AWS CodeArtifact
+AWS CodeGuru
+AWS CodeStar
+AWS Control Tower
+AWS Data Exchange
+AWS DeepLens
+AWS DeepRacer
+AWS Elemental MediaConnect
+AWS Elemental MediaLive
+AWS Elemental MediaPackage
+AWS Elemental MediaStore
+AWS Elemental MediaTailor
+AWS Global Accelerator
+AWS IoT 1-Click
+AWS Managed Services
+AWS Migration Hub
+AWS Outposts
+AWS RoboMaker
+AWS Shield
+AWS Snowball
+AWS Snowmobile
+AWS Well-Architected Tool

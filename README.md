@@ -1,120 +1,153 @@
-# AWS 中国区内容转换工具
+# AWS China Region Content Validation Tool
 
-这个项目提供了一套简单工具，用于验证并转换AWS海外区域的技术内容到AWS中国区。通过自动化分析和验证，帮助用户判断AWS全球区域的技术内容是否适用于中国区，并提供必要的转换建议。
+这个工具用于验证AWS全球区域技术内容在中国区域的兼容性。它分析内容以确定服务、功能和架构是否可以在AWS中国区域（cn-north-1、cn-northwest-1）实现。
 
-## 项目背景
+## 核心功能
 
-AWS中国区与AWS全球区域在服务可用性、功能特性和配置要求等方面存在差异。将AWS全球区域的技术内容（如博客、文档、解决方案）适配到中国区通常需要大量的手动验证和修改工作。本项目旨在通过自动化工具简化这一过程，提高内容转换的效率和准确性。
+- **基本验证**：分析内容中AWS服务在中国区域的兼容性
+- **深度验证**：对可行内容执行实际部署/执行验证
+- **智能可行性门控**：防止在不可行内容上浪费资源
+- **内容类型检测**：自动识别项目与教程内容
+- **AI驱动分析**：使用Amazon Q Developer CLI custom agent进行智能验证
 
-## 工具说明
+## 安装
 
-### 1. 博客转换工具 (aws-cn-content-convert.sh)
+### 前提条件
 
-将网页博客内容转换为Markdown格式，便于后续分析和处理。
+- `markitdown` - URL内容转换工具
+- `kiro-cli` (Amazon Q Developer CLI) - AI agent运行环境
+- AWS CLI - AWS操作
+- AWS中国区域凭证
 
-```bash
-./aws-cn-tool.sh convert -u <博客URL> -o <输出文件路径>
-```
-
-### 2. 内容分析工具 (aws-cn-content-analyze.sh)
-
-分析Markdown内容，识别其中涉及的AWS服务、资源和配置。
-
-```bash
-./aws-cn-tool.sh analyze -f <Markdown文件> -o <输出JSON文件>
-```
-
-### 3. 服务验证工具 (aws-cn-service-validate.sh)
-
-生成交互式脚本，验证识别出的AWS服务在中国区的可用性。
+### 安装依赖
 
 ```bash
-./aws-cn-tool.sh validate -i <服务JSON文件> -o <输出脚本文件> -r <区域> -p <配置文件>
+# 安装 markitdown (推荐使用 pipx)
+pipx install markitdown
+# 或使用 pip
+pip install markitdown
+
+# 安装 kiro-cli (Amazon Q Developer CLI)
+# 参考: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-getting-started-installing.html
+
+# 安装 AWS CLI
+# 参考: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 ```
 
-### 4. 适用性检查工具 (aws-cn-content-evaluate.sh)
+> **注意**: `pipx` 是安装命令行工具的推荐方式，它会为每个工具创建独立的虚拟环境。如果你还没有安装 `pipx`，可以通过 `pip install pipx` 或 `brew install pipx` (macOS) 安装。
 
-评估内容是否适用于AWS中国区，并生成详细报告。
+### AWS中国区域凭证设置
 
 ```bash
-./aws-cn-tool.sh evaluate -i <验证结果JSON> -o <适用性报告JSON> -t <阈值>
+aws configure --profile cn
 ```
 
-## 使用流程
+设置AWS访问密钥、秘密密钥和区域（cn-north-1或cn-northwest-1）
 
-1. **设置环境**：
-   ```bash
-   ./aws-cn-tool.sh setup
-   ```
+## 使用方法
 
-2. **转换博客内容**：
-   ```bash
-   ./aws-cn-tool.sh convert -u https://aws.amazon.com/blogs/aws/some-article -o ./data/aws-article.md
-   ```
+### 基本用法
 
-3. **分析内容中的AWS服务**：
-   ```bash
-   ./aws-cn-tool.sh analyze -f ./data/aws-article.md -o ./data/aws-article-services.json
-   ```
+```bash
+# 验证内容
+./validate.sh -u <content-url> -r <region> -p <profile>
+```
 
-4. **生成服务验证脚本**：
-   ```bash
-   ./aws-cn-tool.sh validate -i ./data/aws-article-services.json -o ./data/aws-article-validation.sh
-   ```
+### 参数
 
-5. **运行验证脚本并保存结果**：
-   ```bash
-   ./data/aws-article-validation.sh > ./data/aws-article-validation-results.json
-   ```
+- `-u, --url`: 内容URL（必需）
+- `-r, --region`: AWS中国区域（默认：cn-northwest-1）
+- `-p, --profile`: AWS CLI配置文件（默认：cn）
+- `--log-level`: 日志级别（默认：INFO）
+- `-h, --help`: 显示帮助信息
 
-6. **评估内容适用性**：
-   ```bash
-   ./aws-cn-tool.sh evaluate -i ./data/aws-article-validation-results.json -o ./data/aws-article-applicability.json
-   ```
+### 示例
+
+```bash
+# 验证AWS博客文章
+./validate.sh -u "https://aws.amazon.com/blogs/big-data/introducing-managed-query-results-for-amazon-athena/"
+
+# 指定区域和配置文件
+./validate.sh -u "https://aws.amazon.com/blogs/..." -r cn-north-1 -p my-cn-profile
+```
 
 ## 项目结构
 
 ```
 .
-├── aws-cn-tool.sh          # 主入口脚本
-├── bin/                    # 可执行脚本目录
-│   ├── aws-cn-common-utils.sh       # 通用工具函数
-│   ├── aws-cn-content-convert.sh    # 博客转换脚本
-│   ├── aws-cn-content-analyze.sh    # 内容分析脚本
-│   ├── aws-cn-service-validate.sh   # 服务验证脚本
-│   ├── aws-cn-content-evaluate.sh   # 适用性检查脚本
-│   └── aws-cn-setup.sh              # 环境设置脚本
-├── data/                   # 数据目录（存放所有生成的文件）
-└── VERSION                 # 版本信息
+├── validate.sh                           # 主入口脚本
+├── .kiro/agents/                         # Kiro CLI agent配置
+│   ├── china-validator.json             # Agent配置文件
+│   ├── china-validator-prompt.md        # Agent提示词
+│   └── inject-validation-context.sh     # 上下文注入hook
+├── unavailable_services.txt              # 中国区域不可用服务列表
+├── README.md                             # 项目说明文档
+└── data/                                 # 生成的验证结果目录
 ```
 
-## 依赖项
+## 工作流程
 
-- Amazon Q CLI (`q`)
-- AWS CLI (`aws`)
-- jq (可选，用于JSON处理)
-- Bash 4.0+
+1. **内容获取**：使用 `markitdown` 将URL内容转换为Markdown格式
+2. **AI验证**：调用 `china-validator` custom agent进行智能分析
+3. **基础验证**：
+   - 识别内容中使用的AWS服务
+   - 对比中国区域服务可用性
+   - 评估初步可行性（HIGH/MODERATE/LOW）
+4. **深度验证**（条件触发）：
+   - 对于HIGH/MODERATE等级的内容
+   - 实际部署GitHub项目或执行教程步骤
+   - 在AWS中国区域真实环境中测试
+   - 智能修正和重试机制（最多3次）
+5. **报告生成**：生成详细的中文兼容性验证报告
+6. **资源清理**：自动清理所有测试资源
 
-## 示例
+## 验证报告
 
-### 验证EKS博客文章
+验证报告包含以下内容：
 
-```bash
-# 设置环境
-./aws-cn-tool.sh setup
+### 📋 验证概览
+- 内容标题、验证时间、目标区域、验证ID
 
-# 转换EKS博客
-./aws-cn-tool.sh convert -u https://aws.amazon.com/blogs/containers/ensuring-fair-bandwidth-allocation-for-amazon-eks-workloads/ -o ./data/eks-bandwidth.md
+### 🔍 基础验证结果
+- 可行性评估等级（🟢 HIGH / 🟡 MODERATE / 🔴 LOW）
+- 识别的AWS服务列表
+- 可用/不可用服务统计
+- 评估说明
 
-# 分析内容
-./aws-cn-tool.sh analyze -f ./data/eks-bandwidth.md -o ./data/eks-services.json
+### 🚀 深入验证结果（条件触发）
+- 验证类型（GitHub项目部署 / 教程步骤验证）
+- 执行状态（✅ 成功 / ⚠️ 部分成功 / ❌ 失败）
+- 遇到的问题和解决方案
+- 修正尝试记录
 
-# 生成验证脚本
-./aws-cn-tool.sh validate -i ./data/eks-services.json -o ./data/eks-validation.sh
+### 📊 最终结论
+- 综合可行性评估
+- 推荐实施方案
+- 风险提示和注意事项
 
-# 运行验证脚本
-./data/eks-validation.sh > ./data/eks-validation-results.json
+## 输出文件
 
-# 评估适用性
-./aws-cn-tool.sh evaluate -i ./data/eks-validation-results.json -o ./data/eks-applicability.json
-```
+每次验证会生成唯一的验证ID（8位UUID），所有文件存储在 `./data/` 目录：
+
+- `{文件名}_{validation_id}.md` - 转换后的Markdown内容
+- `{文件名}_result_{validation_id}.md` - 验证结果报告
+- `{文件名}_{validation_id}.log` - 完整的验证过程日志
+
+## 技术架构
+
+本工具采用 **AI Agent驱动架构**：
+
+- **Shell脚本入口**：命令行接口
+- **Markitdown**：内容提取和转换工具
+- **Kiro CLI Custom Agent**：智能验证引擎
+  - 静态提示词定义验证流程
+  - Hook机制注入动态上下文
+  - 自主决策和执行能力
+  - 智能错误处理和重试
+
+## 注意事项
+
+1. **资源清理**：深入验证会在AWS中创建实际资源，工具会自动清理，但建议验证后检查
+2. **成本控制**：深入验证可能产生AWS费用，建议在测试账户中运行
+3. **凭证安全**：确保AWS凭证安全，不要在公共环境中运行
+4. **网络访问**：需要访问AWS中国区域和目标URL

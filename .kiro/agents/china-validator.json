@@ -20,5 +20,6 @@
         "command": "./.kiro/agents/inject-validation-context.sh"
       }
     ]
-  }
+  },
+  "model": "claude-sonnet-4.5"
 }

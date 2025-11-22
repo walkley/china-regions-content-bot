@@ -131,16 +131,17 @@ check_aws_profile "$PROFILE"
 # Generate validation ID
 VALIDATION_ID=$(uuidgen | cut -c1-8 | tr '[:upper:]' '[:lower:]')
 
-# Create data directory
-mkdir -p ./data
-
 # Generate safe filename from URL
 SAFE_FILENAME=$(basename "$URL" | sed 's/[^a-zA-Z0-9]/_/g')
 
+# Create directory structure for this validation
+VALIDATION_DIR="./docs/reports/${SAFE_FILENAME}_${VALIDATION_ID}"
+mkdir -p "$VALIDATION_DIR"
+
 # File paths
-MARKDOWN_FILE="./data/${SAFE_FILENAME}_${VALIDATION_ID}.md"
-RESULT_FILE="./data/${SAFE_FILENAME}_result_${VALIDATION_ID}.md"
-LOG_FILE="./data/${SAFE_FILENAME}_${VALIDATION_ID}.log"
+MARKDOWN_FILE="${VALIDATION_DIR}/source.md"
+RESULT_FILE="${VALIDATION_DIR}/report.md"
+LOG_FILE="${VALIDATION_DIR}/validation.log"
 
 log_info "Validating $URL"
 
@@ -155,13 +156,11 @@ fi
 log_info "Starting validation with china-validator agent"
 log_info "Content file: $MARKDOWN_FILE"
 log_info "Result file: $RESULT_FILE"
-log_info "Validation ID: $VALIDATION_ID"
 log_info "Region: $REGION, Profile: $PROFILE"
 
 # Set environment variables for the agent
 export VALIDATION_CONTENT_FILE="$MARKDOWN_FILE"
 export VALIDATION_RESULT_FILE="$RESULT_FILE"
-export VALIDATION_ID="$VALIDATION_ID"
 export VALIDATION_AWS_REGION="$REGION"
 export VALIDATION_AWS_PROFILE="$PROFILE"
 

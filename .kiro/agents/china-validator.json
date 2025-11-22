@@ -7,7 +7,7 @@
   "toolsSettings": {
     "fs_write": {
       "allowedPaths": [
-        "./data/**"
+        "./docs/reports/**"
       ]
     }
   },

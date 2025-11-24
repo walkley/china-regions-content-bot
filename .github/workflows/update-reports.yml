@@ -7,6 +7,9 @@ on:
       - '!docs/reports.json'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   update-reports:
     runs-on: ubuntu-latest

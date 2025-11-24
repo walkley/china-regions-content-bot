@@ -82,8 +82,19 @@ aws configure --profile cn
 │   ├── china-validator-prompt.md         # Agent 提示词
 │   └── inject-validation-context.sh      # 上下文注入 hook
 ├── unavailable_services.txt              # 中国区不可用服务列表
-├── README.md                             # 项目说明文档
-└── data/                                 # 验证结果输出目录
+├── scripts/
+│   └── generate_reports_json.py          # 生成 reports.json 的脚本
+├── docs/                                 # GitHub Pages 文档目录
+│   ├── index.html                        # 单页应用主页
+│   ├── reports.json                      # 报告元数据
+│   ├── assets/
+│   │   └── app.js                        # 前端交互逻辑
+│   └── reports/                          # 验证报告目录
+│       └── [blog_title_id]/
+│           ├── source.md                 # 原始博客内容
+│           ├── report.md                 # 验证报告
+│           └── validation.log            # 验证日志
+└── README.md                             # 项目说明文档
 ```
 
 ## 工作流程
@@ -128,11 +139,16 @@ aws configure --profile cn
 
 ## 输出文件
 
-每次验证会生成唯一的验证 ID（8 位 UUID），所有文件存储在 `./data/` 目录：
+每次验证会生成唯一的验证 ID（8 位 UUID），所有文件存储在 `./docs/reports/` 目录：
 
-- `{文件名}_{validation_id}.md` - 转换后的 Markdown 内容
-- `{文件名}_result_{validation_id}.md` - 验证结果报告
-- `{文件名}_{validation_id}.log` - 完整的验证过程日志
+```
+docs/reports/[blog_title]_[validation_id]/
+├── source.md          # 转换后的 Markdown 内容
+├── report.md          # 验证结果报告
+└── validation.log     # 完整的验证过程日志
+```
+
+验证完成后会自动更新 `docs/reports.json`，用于网页展示。
 
 ## 技术架构
 

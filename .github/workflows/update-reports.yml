@@ -1,0 +1,34 @@
+name: Update Reports
+
+on:
+  push:
+    paths:
+      - 'docs/reports/**'
+      - '!docs/reports.json'
+  workflow_dispatch:
+
+jobs:
+  update-reports:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      
+      - name: Generate reports.json
+        run: python3 scripts/generate_reports_json.py
+      
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🤖 Auto-update reports.json"
+          file_pattern: 'docs/reports.json'
+          commit_user_name: github-actions[bot]
+          commit_user_email: github-actions[bot]@users.noreply.github.com

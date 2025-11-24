@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS 中国区博客兼容性验证</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5/github-markdown.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11/styles/github.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background: #f6f8fa;
+            color: #24292f;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: white;
+            border-bottom: 1px solid #d0d7de;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        
+        header h1 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        header p {
+            color: #57606a;
+            font-size: 16px;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: white;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            padding: 16px;
+            text-align: center;
+        }
+        
+        .stat-card .number {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .stat-card .label {
+            color: #57606a;
+            font-size: 14px;
+        }
+        
+        .stat-card.high .number { color: #1a7f37; }
+        .stat-card.moderate .number { color: #bf8700; }
+        .stat-card.low .number { color: #cf222e; }
+        
+        .controls {
+            background: white;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            padding: 16px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .search-box {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .filter-btn {
+            padding: 6px 12px;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        
+        .filter-btn:hover {
+            background: #f6f8fa;
+        }
+        
+        .filter-btn.active {
+            background: #0969da;
+            color: white;
+            border-color: #0969da;
+        }
+        
+        .reports-list {
+            background: white;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        
+        .report-item {
+            padding: 16px;
+            border-bottom: 1px solid #d0d7de;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .report-item:last-child {
+            border-bottom: none;
+        }
+        
+        .report-item:hover {
+            background: #f6f8fa;
+        }
+        
+        .report-item .title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #0969da;
+            margin-bottom: 4px;
+        }
+        
+        .report-item .meta {
+            font-size: 14px;
+            color: #57606a;
+        }
+        
+        .report-item .badge {
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        
+        .badge.high {
+            background: #dafbe1;
+            color: #1a7f37;
+        }
+        
+        .badge.moderate {
+            background: #fff8c5;
+            color: #bf8700;
+        }
+        
+        .badge.low {
+            background: #ffebe9;
+            color: #cf222e;
+        }
+        
+        .report-detail {
+            display: none;
+            background: white;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            padding: 32px;
+        }
+        
+        .report-detail.active {
+            display: block;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 8px 16px;
+            background: #f6f8fa;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #24292f;
+        }
+        
+        .back-btn:hover {
+            background: #eaeef2;
+        }
+        
+        .markdown-body {
+            padding: 20px 0;
+        }
+        
+        .admonition {
+            padding: 16px;
+            margin: 16px 0;
+            border-left: 4px solid;
+            border-radius: 4px;
+        }
+        
+        .admonition.success {
+            background: #dafbe1;
+            border-color: #1a7f37;
+        }
+        
+        .admonition.warning {
+            background: #fff8c5;
+            border-color: #bf8700;
+        }
+        
+        .admonition.danger {
+            background: #ffebe9;
+            border-color: #cf222e;
+        }
+        
+        .admonition-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #57606a;
+        }
+        
+        .empty {
+            text-align: center;
+            padding: 40px;
+            color: #57606a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AWS 中国区博客兼容性验证</h1>
+            <p>AWS 海外博客在中国区的适配情况分析</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- 统计卡片 -->
+        <div class="stats" id="stats">
+            <div class="stat-card">
+                <div class="number" id="stat-total">0</div>
+                <div class="label">总验证数</div>
+            </div>
+            <div class="stat-card high">
+                <div class="number" id="stat-high">0</div>
+                <div class="label">🟢 可直接实施</div>
+            </div>
+            <div class="stat-card moderate">
+                <div class="number" id="stat-moderate">0</div>
+                <div class="label">🟡 需要调整</div>
+            </div>
+            <div class="stat-card low">
+                <div class="number" id="stat-low">0</div>
+                <div class="label">🔴 不建议实施</div>
+            </div>
+        </div>
+        
+        <!-- 列表视图 -->
+        <div id="list-view">
+            <div class="controls">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="搜索博客标题...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">全部</button>
+                    <button class="filter-btn" data-filter="HIGH">🟢 HIGH</button>
+                    <button class="filter-btn" data-filter="MODERATE">🟡 MODERATE</button>
+                    <button class="filter-btn" data-filter="LOW">🔴 LOW</button>
+                </div>
+            </div>
+            
+            <div class="reports-list" id="reports-list">
+                <div class="loading">加载中...</div>
+            </div>
+        </div>
+        
+        <!-- 详情视图 -->
+        <div id="detail-view" class="report-detail">
+            <a href="#" class="back-btn" id="back-btn">← 返回列表</a>
+            <div class="markdown-body" id="markdown-content"></div>
+        </div>
+    </div>
+    
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@11/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11/lib/core.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11/lib/languages/javascript.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11/lib/languages/python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11/lib/languages/bash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11/lib/languages/json.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11/lib/languages/yaml.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/contrib/auto-render.min.js"></script>
+    
+    <script src="assets/app.js"></script>
+</body>
+</html>

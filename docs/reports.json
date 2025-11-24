@@ -1,0 +1,211 @@
+{
+  "generated_at": "2025-11-24T07:04:28.895818Z",
+  "statistics": {
+    "total": 20,
+    "high": 6,
+    "moderate": 2,
+    "low": 12
+  },
+  "reports": [
+    {
+      "title": "使用全新Amazon EC2 P6-B300实例加速大规模AI应用",
+      "url": "reports/accelerate_large_scale_ai_applications_with_the_new_amazon_ec2_p6_b300_instances_6e1556fa/",
+      "original_url": "https://aws.amazon.com/blogs/aws/accelerate-large-scale-ai-applications-with-the-new-amazon-ec2-p6-b300-instances/",
+      "validation_date": "2025-11-24",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 10,
+      "unavailable_services": 0
+    },
+    {
+      "title": "Accelerate workflow development with enhanced local testing in AWS Step Functions",
+      "url": "reports/accelerate_workflow_development_with_enhanced_local_testing_in_aws_step_functions_355bd0e4/",
+      "original_url": "https://aws.amazon.com/blogs/aws/accelerate-workflow-development-with-enhanced-local-testing-in-aws-step-functions/",
+      "validation_date": "2025-11-24",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 3,
+      "unavailable_services": 0
+    },
+    {
+      "title": "AWS Control Tower introduces a Controls Dedicated experience",
+      "url": "reports/aws_control_tower_introduces_a_controls_dedicated_experience_f24d78e9/",
+      "original_url": "https://aws.amazon.com/blogs/aws/aws-control-tower-introduces-a-controls-dedicated-experience/",
+      "validation_date": "2025-11-24",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 2,
+      "unavailable_services": 2
+    },
+    {
+      "title": "AWS Lambda增强SQS事件处理：新增Provisioned Mode，扩展速度提升3倍，容量提升16倍",
+      "url": "reports/aws_lambda_enhances_sqs_processing_with_new_provisioned_mode_3x_faster_scaling_16x_higher_capacity_7dc3134b/",
+      "original_url": "https://aws.amazon.com/blogs/aws/aws-lambda-enhances-sqs-processing-with-new-provisioned-mode-3x-faster-scaling-16x-higher-capacity/",
+      "validation_date": "2025-11-24",
+      "target_region": "cn-northwest-1",
+      "feasibility": "MODERATE",
+      "available_services": 6,
+      "unavailable_services": 0
+    },
+    {
+      "title": "AWS Weekly Roundup: OpenAI partnership, Jane Goodall Institute research archive, and more (November 10, 2025)",
+      "url": "reports/aws_weekly_roundup_amazon_s3_amazon_ec2_and_more_november_10_2025_6799bcb4/",
+      "original_url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-s3-amazon-ec2-and-more-november-10-2025/",
+      "validation_date": "2025-11-24",
+      "target_region": "cn-northwest-1",
+      "feasibility": "MODERATE",
+      "available_services": 10,
+      "unavailable_services": 1
+    },
+    {
+      "title": "AWS Weekly Roundup: AWS Lambda for Rust, NLB for QUIC protocol, Amazon DCV for Mac, and more (November 17, 2025)",
+      "url": "reports/aws_weekly_roundup_aws_lambda_load_balancers_amazon_dcv_amazon_linux_2023_and_more_november_17_2025_f0bbb60e/",
+      "original_url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-lambda-load-balancers-amazon-dcv-amazon-linux-2023-and-more-november-17-2025/",
+      "validation_date": "2025-11-24",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 16,
+      "unavailable_services": 1
+    },
+    {
+      "title": "Build production-ready applications without infrastructure complexity using Amazon ECS Express Mode",
+      "url": "reports/build_production_ready_applications_without_infrastructure_complexity_using_amazon_ecs_express_mode_7816178f/",
+      "original_url": "https://aws.amazon.com/blogs/aws/build-production-ready-applications-without-infrastructure-complexity-using-amazon-ecs-express-mode/",
+      "validation_date": "2025-11-24",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 9,
+      "unavailable_services": 0
+    },
+    {
+      "title": "为Amazon S3通用存储桶引入基于属性的访问控制",
+      "url": "reports/introducing_attribute_based_access_control_for_amazon_s3_general_purpose_buckets_bf322588/",
+      "original_url": "https://aws.amazon.com/blogs/aws/introducing-attribute-based-access-control-for-amazon-s3-general-purpose-buckets/",
+      "validation_date": "2025-11-24",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 11,
+      "unavailable_services": 0
+    },
+    {
+      "title": "Introducing AWS Capabilities by Region for easier Regional planning and faster global deployments",
+      "url": "reports/introducing_aws_capabilities_by_region_for_easier_regional_planning_and_faster_global_deployments_7d4b8b81/",
+      "original_url": "https://aws.amazon.com/blogs/aws/introducing-aws-capabilities-by-region-for-easier-regional-planning-and-faster-global-deployments/",
+      "validation_date": "2025-11-24",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 5,
+      "unavailable_services": 0
+    },
+    {
+      "title": "Introducing AWS IoT Core Device Location integration with Amazon Sidewalk",
+      "url": "reports/introducing_aws_iot_core_device_location_integration_with_amazon_sidewalk_c68c12fa/",
+      "original_url": "https://aws.amazon.com/blogs/aws/introducing-aws-iot-core-device-location-integration-with-amazon-sidewalk/",
+      "validation_date": "2025-11-24",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 6,
+      "unavailable_services": 1
+    },
+    {
+      "title": "Introducing Our Final AWS Heroes of 2025",
+      "url": "reports/introducing_our_final_aws_heroes_of_2025_1f39a81d/",
+      "original_url": "https://aws.amazon.com/blogs/aws/introducing-our-final-aws-heroes-of-2025/",
+      "validation_date": "2025-11-24",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 0,
+      "unavailable_services": 0
+    },
+    {
+      "title": "Introducing VPC encryption controls: Enforce encryption in transit within and across VPCs in a Region",
+      "url": "reports/introducing_vpc_encryption_controls_enforce_encryption_in_transit_within_and_across_vpcs_in_a_region_31dacb11/",
+      "original_url": "https://aws.amazon.com/blogs/aws/introducing-vpc-encryption-controls-enforce-encryption-in-transit-within-and-across-vpcs-in-a-region/",
+      "validation_date": "2025-11-24",
+      "target_region": "cn-northwest-1, cn-north-1",
+      "feasibility": "LOW",
+      "available_services": 24,
+      "unavailable_services": 0
+    },
+    {
+      "title": "Monitor network performance and traffic across your EKS clusters with Container Network Observability",
+      "url": "reports/monitor_network_performance_and_traffic_across_your_eks_clusters_with_container_network_observability_72068493/",
+      "original_url": "https://aws.amazon.com/blogs/aws/monitor-network-performance-and-traffic-across-your-eks-clusters-with-container-network-observability/",
+      "validation_date": "2025-11-24",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 4,
+      "unavailable_services": 1
+    },
+    {
+      "title": "New Amazon Bedrock service tiers help you match AI workload performance with cost",
+      "url": "reports/new_amazon_bedrock_service_tiers_help_you_match_ai_workload_performance_with_cost_0b015d9c/",
+      "original_url": "https://aws.amazon.com/blogs/aws/new-amazon-bedrock-service-tiers-help-you-match-ai-workload-performance-with-cost/",
+      "validation_date": "2025-11-24",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 3,
+      "unavailable_services": 1
+    },
+    {
+      "title": "New: AWS Billing Transfer for centrally managing AWS billing and costs across multiple organizations",
+      "url": "reports/new_aws_billing_transfer_for_centrally_managing_aws_billing_and_costs_across_multiple_organizations_b21209ca/",
+      "original_url": "https://aws.amazon.com/blogs/aws/new-aws-billing-transfer-for-centrally-managing-aws-billing-and-costs-across-multiple-organizations/",
+      "validation_date": "2025-11-24",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 4,
+      "unavailable_services": 2
+    },
+    {
+      "title": "Amazon SageMaker Catalog新业务元数据功能以提升组织内的可发现性",
+      "url": "reports/new_business_metadata_features_in_amazon_sagemaker_catalog_to_improve_discoverability_across_organizations_344a0c01/",
+      "original_url": "https://aws.amazon.com/blogs/aws/new-business-metadata-features-in-amazon-sagemaker-catalog-to-improve-discoverability-across-organizations/",
+      "validation_date": "2025-11-24",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 4,
+      "unavailable_services": 1
+    },
+    {
+      "title": "New one-click onboarding and notebooks with a built-in AI agent in Amazon SageMaker Unified Studio",
+      "url": "reports/new_one_click_onboarding_and_notebooks_with_ai_agent_in_amazon_sagemaker_unified_studio_24157516/",
+      "original_url": "https://aws.amazon.com/blogs/aws/new-one-click-onboarding-and-notebooks-with-ai-agent-in-amazon-sagemaker-unified-studio/",
+      "validation_date": "2025-11-24",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 10,
+      "unavailable_services": 1
+    },
+    {
+      "title": "Secure EKS clusters with the new support for Amazon EKS in AWS Backup",
+      "url": "reports/secure_eks_clusters_with_the_new_support_for_amazon_eks_in_aws_backup_3b6df9ac/",
+      "original_url": "https://aws.amazon.com/blogs/aws/secure-eks-clusters-with-the-new-support-for-amazon-eks-in-aws-backup/",
+      "validation_date": "2025-11-24",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 7,
+      "unavailable_services": 0
+    },
+    {
+      "title": "Simplify access to external services using AWS IAM Outbound Identity Federation",
+      "url": "reports/simplify_access_to_external_services_using_aws_iam_outbound_identity_federation_257835a9/",
+      "original_url": "https://aws.amazon.com/blogs/aws/simplify-access-to-external-services-using-aws-iam-outbound-identity-federation/",
+      "validation_date": "2025-11-24",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 4,
+      "unavailable_services": 0
+    },
+    {
+      "title": "Streamlined multi-tenant application development with tenant isolation mode in AWS Lambda",
+      "url": "reports/streamlined_multi_tenant_application_development_with_tenant_isolation_mode_in_aws_lambda_1b92e00e/",
+      "original_url": "https://aws.amazon.com/blogs/aws/streamlined-multi-tenant-application-development-with-tenant-isolation-mode-in-aws-lambda/",
+      "validation_date": "2025-11-24",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 1,
+      "unavailable_services": 0
+    }
+  ]
+}

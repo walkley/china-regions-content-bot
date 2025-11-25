@@ -39,6 +39,7 @@ def extract_report_metadata(report_dir):
         # Extract required fields
         return {
             'title': metadata.get('title', report_dir.name),
+            'publish_date': metadata.get('publish_date', ''),
             'url': f'reports/{report_dir.name}/',
             'original_url': metadata.get('original_url', ''),
             'validation_date': metadata.get('validation_date', ''),

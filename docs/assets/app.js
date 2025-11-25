@@ -91,7 +91,7 @@ function renderReportsList() {
             <div>
                 <div class="title">${report.title}</div>
                 <div class="meta">
-                    ${report.validation_date} | 
+                    ${report.publish_date} | 
                     ${report.target_region} | 
                     可用服务: ${report.available_services}/${report.available_services + report.unavailable_services}
                 </div>

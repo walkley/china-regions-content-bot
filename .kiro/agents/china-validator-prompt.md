@@ -59,9 +59,14 @@
 
 生成统一的中文可行性验证报告，使用Markdown格式，适合网页展示：
 
+**重要**：
+- 报告中的 `title` 字段和一级标题（`# 标题`）必须使用中文。如果原始博客标题是英文，需要翻译成中文。
+- 从 source.md 中提取博客发布时间（格式如 `by [作者] on 18 NOV 2025`），转换为 `YYYY-MM-DD` 格式填入 `publish_date` 字段。
+
 ```markdown
 ---
-title: [博客标题]
+title: [博客标题的中文翻译]
+publish_date: [YYYY-MM-DD，从source.md提取]
 original_url: [原始博客URL]
 validation_date: [YYYY-MM-DD]
 target_region: [目标区域]
@@ -70,7 +75,7 @@ available_services: [可用服务数量]
 unavailable_services: [不可用服务数量]
 ---
 
-# [博客标题]
+# [博客标题的中文翻译]
 
 [📖 查看原始博客]([原始博客URL]) | 验证日期: [YYYY-MM-DD]
 

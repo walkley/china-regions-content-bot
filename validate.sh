@@ -33,27 +33,27 @@ log_warning() {
 # Check required commands
 check_dependencies() {
     local missing_deps=()
-    
-    # Check markitdown
-    if ! command -v markitdown &> /dev/null; then
-        missing_deps+=("markitdown (install: pipx install markitdown)")
-    fi
-    
+
+    # # Check markitdown (Comment out since markitdown no longer needed)
+    # if ! command -v markitdown &> /dev/null; then
+    #     missing_deps+=("markitdown (install: pipx install markitdown)")
+    # fi
+
     # Check kiro-cli
     if ! command -v kiro-cli &> /dev/null; then
         missing_deps+=("kiro-cli (Amazon Q Developer CLI)")
     fi
-    
+
     # Check aws cli
     if ! command -v aws &> /dev/null; then
         missing_deps+=("aws (AWS CLI)")
     fi
-    
+
     # Check uuidgen
     if ! command -v uuidgen &> /dev/null; then
         missing_deps+=("uuidgen (usually pre-installed on macOS/Linux)")
     fi
-    
+
     if [ ${#missing_deps[@]} -ne 0 ]; then
         log_error "Missing required dependencies:"
         for dep in "${missing_deps[@]}"; do
@@ -66,13 +66,13 @@ check_dependencies() {
 # Check AWS profile configuration
 check_aws_profile() {
     local profile=$1
-    
+
     if ! aws configure list --profile "$profile" &> /dev/null; then
         log_error "AWS profile '$profile' not found or not configured properly."
         echo "Please run: aws configure --profile $profile"
         exit 1
     fi
-    
+
     # Check if profile has credentials
     if ! aws sts get-caller-identity --profile "$profile" &> /dev/null; then
         log_warning "AWS profile '$profile' credentials may be invalid or expired."
@@ -128,14 +128,15 @@ fi
 # Check AWS profile configuration
 check_aws_profile "$PROFILE"
 
-# Generate validation ID
-VALIDATION_ID=$(uuidgen | cut -c1-8 | tr '[:upper:]' '[:lower:]')
+# Generate timestamp for validation
+TIMESTAMP=$(date '+%Y%m%d_%H%M%S')
 
-# Generate safe filename from URL
-SAFE_FILENAME=$(basename "$URL" | sed 's/[^a-zA-Z0-9]/_/g')
+# Extract blog URL path (remove protocol and domain, convert to safe directory name)
+# Example: https://aws.amazon.com/blogs/aws/my-blog/ -> blogs_aws_my-blog
+URL_PATH=$(echo "$URL" | sed -E 's|https?://[^/]+/||' | sed 's|/$||' | sed 's|/|_|g')
 
-# Create directory structure for this validation
-VALIDATION_DIR="./docs/reports/${SAFE_FILENAME}_${VALIDATION_ID}"
+# Create directory structure for this validation: docs/reports/<url_path>/<timestamp>
+VALIDATION_DIR="./docs/reports/${URL_PATH}/${TIMESTAMP}"
 mkdir -p "$VALIDATION_DIR"
 
 # File paths
@@ -147,7 +148,7 @@ log_info "Validating $URL"
 
 # Step 1: Convert URL to Markdown using markitdown
 log_info "Converting URL to Markdown..."
-if ! markitdown "$URL" -o "$MARKDOWN_FILE" 2>&1; then
+if ! python3 content-convert.py -u "$URL" -o "$MARKDOWN_FILE" 2>&1; then
     log_error "Failed to convert URL to Markdown"
     exit 1
 fi

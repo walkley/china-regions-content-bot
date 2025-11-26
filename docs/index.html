@@ -76,6 +76,7 @@
         .stat-card.high .number { color: #1a7f37; }
         .stat-card.moderate .number { color: #bf8700; }
         .stat-card.low .number { color: #cf222e; }
+        .stat-card.not_applicable .number { color: #6e7781; }
         
         .controls {
             background: white;
@@ -187,6 +188,11 @@
             background: #ffebe9;
             color: #cf222e;
         }
+
+        .badge.not_applicable {
+            background: #eaeef2;
+            color: #6e7781;
+        }
         
         .report-detail {
             display: none;
@@ -244,6 +250,11 @@
             background: #ffebe9;
             border-color: #cf222e;
         }
+
+        .admonition.info {
+            background: #eaeef2;
+            border-color: #6e7781;
+        }
         
         .admonition-title {
             font-weight: 600;
@@ -290,6 +301,10 @@
                 <div class="number" id="stat-low">0</div>
                 <div class="label">🔴 不兼容</div>
             </div>
+            <div class="stat-card not_applicable">
+                <div class="number" id="stat-not_applicable">0</div>
+                <div class="label">⚪ 不适用</div>
+            </div>
         </div>
         
         <!-- 列表视图 -->
@@ -303,6 +318,7 @@
                     <button class="filter-btn" data-filter="HIGH">🟢 完全兼容</button>
                     <button class="filter-btn" data-filter="MODERATE">🟡 部分兼容</button>
                     <button class="filter-btn" data-filter="LOW">🔴 不兼容</button>
+                    <button class="filter-btn" data-filter="NOT_APPLICABLE">⚪ 不适用</button>
                 </div>
             </div>
             

@@ -75,6 +75,7 @@ function updateStats(stats) {
     document.getElementById('stat-high').textContent = stats.high || 0;
     document.getElementById('stat-moderate').textContent = stats.moderate || 0;
     document.getElementById('stat-low').textContent = stats.low || 0;
+    document.getElementById('stat-not_applicable').textContent = stats.not_applicable || 0;
 }
 
 // 渲染报告列表

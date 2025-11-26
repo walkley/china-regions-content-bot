@@ -1,0 +1,528 @@
+[
+  {
+    "title": "Snap Inc. uses Amazon CloudFront Origin Shield to improve download and upload latency",
+    "link": "https://aws.amazon.com/blogs/networking-and-content-delivery/snap-inc-uses-amazon-cloudfront-origin-shield-to-improve-download-and-upload-latency/",
+    "tags": [
+      "blog-posts#category#networking-content-delivery",
+      "blog-posts#category#storage",
+      "blog-posts#category-storage#amazon-simple-storage-services-s3",
+      "blog-posts#category-industries#entertainment",
+      "GLOBAL#product#cloudfront",
+      "GLOBAL#tech-category#networking-content-dev",
+      "blog-posts#category-networking-content-delivery#amazon-cloudfront",
+      "GLOBAL#content-type#blog-post",
+      "GLOBAL#tech-category#storage",
+      "blog-posts#category-industries-entertainment#direct-to-consumer-ott",
+      "GLOBAL#product#s3",
+      "blog-posts#category#industries",
+      "blog-posts#category#uncategorized",
+      "blog-posts#category-post-types#customer-solutions",
+      "blog-posts#category#post-types",
+      "GLOBAL#industry#media-entertainment"
+    ],
+    "authors": [
+      "Delyan Radichkov"
+    ],
+    "feature_image": "https://d2908q01vomqb2.cloudfront.net/5b384ce32d8cdef02bc3a139d4cac0a22bb029e8/2025/11/26/Snap-Inc-uses-Amazon-CloudFront-Origin-Shield-to-improve-download-and-upload-latency-300x169.jpg",
+    "date_created": "2025-11-26T04:00:19+0000",
+    "description": "This blog was co-authored by Manchun Yao, Staff Software Engineer at Snap Inc. Snapchat is a popular app used by hundreds of millions of people around the world to communicate with their close friends and family. Snapchat’s focus is on enabling a fast and fun way to communicate by building features such as augmented reality [...]"
+  },
+  {
+    "title": "PingCAP increased TiDB Cloud stability using Amazon EBS detailed performance statistics",
+    "link": "https://aws.amazon.com/blogs/storage/pingcap-increased-tidb-cloud-stability-using-amazon-ebs-detailed-performance-statistics/",
+    "tags": [
+      "blog-posts#category-storage#amazon-elastic-block-storage-ebs",
+      "GLOBAL#content-type#blog-post",
+      "GLOBAL#tech-category#compute",
+      "GLOBAL#tech-category#storage",
+      "blog-posts#category#learning-levels",
+      "blog-posts#category-compute#amazon-kubernetes-service",
+      "blog-posts#post-tags#amazon-elastic-kubernetes-service-amazon-eks",
+      "blog-posts#post-tags#aws-cloud-storage",
+      "blog-posts#category#management-tools",
+      "GLOBAL#product#ebs",
+      "blog-posts#category-post-types#technical-how-to",
+      "blog-posts#category-management-tools#amazon-managed-service-for-grafana",
+      "blog-posts#post-tags#amazon-elastic-block-storage-amazon-ebs",
+      "blog-posts#category#post-types",
+      "blog-posts#category#storage",
+      "GLOBAL#product#eks",
+      "GLOBAL#level#300",
+      "blog-posts#category#compute",
+      "blog-posts#category-learning-levels#advanced-300"
+    ],
+    "authors": [
+      "Allen Xie",
+      "Bin Duan",
+      "Freddy Sun",
+      "Parnika Singh",
+      "Yao Yu"
+    ],
+    "feature_image": "https://d2908q01vomqb2.cloudfront.net/e1822db470e60d090affd0956d743cb0e7cdf113/2025/10/27/Amazon_EBS_Thumbnail_03-300x169.png",
+    "date_created": "2025-11-26T01:30:01+0000",
+    "description": "PingCAP is a global company focused on developing distributed, high-performance, and auto scaling relational databases. Its flagship product, TiDB, is a popular open source databases, and TiDB Cloud, a fully managed Database-as-a-Service (DBaaS) based on TiDB, delivers horizontal scalability, strong consistency, and high availability for high-performance applications. Many PingCAP customers run highly latency-sensitive workloads such [...]"
+  },
+  {
+    "title": "Amazon SageMaker AI introduces EAGLE based adaptive speculative decoding to accelerate generative AI inference",
+    "link": "https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-ai-introduces-eagle-based-adaptive-speculative-decoding-to-accelerate-generative-ai-inference/",
+    "tags": [
+      "blog-posts#category#post-types",
+      "blog-posts#category-artificial-intelligence#sagemaker",
+      "blog-posts#category-artificial-intelligence-sagemaker#amazon-sagemaker-ai",
+      "blog-posts#category#artificial-intelligence",
+      "GLOBAL#content-type#launch-announcement",
+      "blog-posts#category-post-types#technical-how-to",
+      "blog-posts#category-post-types#announcements",
+      "GLOBAL#content-type#blog-post"
+    ],
+    "authors": [
+      "Kareem Syed-Mohammed",
+      "Anisha Kolla",
+      "Ram Vegiraju",
+      "Siddharth Shah",
+      "Vinay Arora",
+      "Xu Deng",
+      "Andy Peng",
+      "Johna Liu"
+    ],
+    "feature_image": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2025/11/25/Screenshot-2025-11-19-at-10.12.40-PM-300x149.png",
+    "date_created": "2025-11-26T00:29:48+0000",
+    "description": "Amazon SageMaker AI now supports EAGLE-based adaptive speculative decoding, a technique that accelerates large language model inference by up to 2.5x while maintaining output quality. In this post, we explain how to use EAGLE 2 and EAGLE 3 speculative decoding in Amazon SageMaker AI, covering the solution architecture, optimization workflows using your own datasets or SageMaker’s built-in data, and benchmark results demonstrating significant improvements in throughput and latency."
+  },
+  {
+    "title": "Securing Egress Architectures with Network Firewall Proxy",
+    "link": "https://aws.amazon.com/blogs/networking-and-content-delivery/securing-egress-architectures-with-network-firewall-proxy/",
+    "tags": [
+      "blog-posts#category-security-identity-compliance#aws-network-firewall",
+      "blog-posts#category#post-types",
+      "blog-posts#category-post-types#announcements",
+      "GLOBAL#tech-category#security-identity-compliance",
+      "GLOBAL#tech-category#networking-content-dev",
+      "blog-posts#category#networking-content-delivery",
+      "blog-posts#category#security-identity-compliance",
+      "GLOBAL#content-type#launch-announcement",
+      "GLOBAL#content-type#blog-post"
+    ],
+    "authors": [
+      "Tom Adamski",
+      "Akshay Choudhry"
+    ],
+    "feature_image": "",
+    "date_created": "2025-11-26T00:07:44+0000",
+    "description": "Customers who control access out of their AWS environments using self-managed proxies often find it challenging to deploy, scale, and patch their EC2 or container-based proxy fleets. With the recent launch of AWS Network Firewall proxy preview, AWS is taking over the heavy lifting of proxy management and deployment, allowing customers to focus on just [...]"
+  },
+  {
+    "title": "AWS re:Invent 2025: Your Complete Guide to Quantum Computing Sessions",
+    "link": "https://aws.amazon.com/blogs/quantum-computing/aws-reinvent-2025-your-complete-guide-to-quantum-computing-sessions/",
+    "tags": [
+      "blog-posts#category-quantum-technologies#amazon-braket",
+      "blog-posts#post-tags#amazon-braket",
+      "blog-posts#post-tags#quantum-computing",
+      "blog-posts#post-tags#research",
+      "blog-posts#post-tags#quantum-algorithms",
+      "blog-posts#category#quantum-technologies",
+      "GLOBAL#tech-category#quantum",
+      "blog-posts#post-tags#quantum-technologies",
+      "GLOBAL#content-type#blog-post"
+    ],
+    "authors": [
+      "Charunethran Panchalam Govindarajan"
+    ],
+    "feature_image": "https://d2908q01vomqb2.cloudfront.net/5a5b0f9b7d3f8fc84c3cef8fd8efaaa6c70d75ab/2025/11/25/RIV-2025-2-300x152.png",
+    "date_created": "2025-11-25T23:55:41+0000",
+    "description": "AWS re:Invent 2025 returns to Las Vegas from December 1 to 5, bringing together builders, researchers, and business leaders who are exploring what is next in advanced computing on AWS. Quantum computing is moving from research labs into early real-world use. With Amazon Braket , AWS gives you managed access to multiple quantum hardware providers, [...]"
+  },
+  {
+    "title": "Meet up with Spatial Computing and Physical AI Specialists at AWS re:Invent 2025!",
+    "link": "https://aws.amazon.com/blogs/spatial/meet-up-with-spatial-computing-physical-ai-at-aws-reinvent-2025/",
+    "tags": [
+      "blog-posts#category#events",
+      "blog-posts#category-post-types#announcements",
+      "GLOBAL#content-type#blog-post",
+      "blog-posts#category#artificial-intelligence",
+      "GLOBAL#content-type#launch-announcement",
+      "blog-posts#post-tags#spatial-computing",
+      "blog-posts#post-tags#ai",
+      "blog-posts#category#post-types",
+      "GLOBAL#tech-category#ai-ml",
+      "blog-posts#category#enterprise-strategy"
+    ],
+    "authors": [
+      "David Randle",
+      "Dan Cotting"
+    ],
+    "feature_image": "https://d2908q01vomqb2.cloudfront.net/a17554a0d2b15a664c0e73900184544f19e70227/2025/11/25/AWS-re-Invent-2025-e1764106003847-300x114.png",
+    "date_created": "2025-11-25T23:12:17+0000",
+    "description": "AWS re:Invent 2025 is just around the corner, and Spatial Computing & Physical AI specialists will be on hand at the event to share exciting technical presentations, workshops, chalk talks and more. Please join us to learn how AWS infrastructure and services enable autonomous systems to perceive, understand, and act in the real world. Key [...]"
+  },
+  {
+    "title": "Your Guide to AWS for Telecom at re:Invent 2025",
+    "link": "https://aws.amazon.com/blogs/industries/your-guide-to-aws-for-telecom-at-reinvent-2025/",
+    "tags": [
+      "blog-posts#post-tags#aws-reinvent",
+      "blog-posts#category#uncategorized",
+      "blog-posts#post-tags#reinvent",
+      "GLOBAL#industry#telecommunications",
+      "blog-posts#category-industries#telecommunications",
+      "blog-posts#category#industries",
+      "GLOBAL#content-type#blog-post"
+    ],
+    "authors": [
+      "Allison Smith",
+      "Rahul Shira",
+      "Swati Koul"
+    ],
+    "feature_image": "https://d2908q01vomqb2.cloudfront.net/c5b76da3e608d34edb07244cd9b875ee86906328/2025/11/25/Your-Guide-to-AWS-for-Telecom-at-reInvent-2025-300x169.jpg",
+    "date_created": "2025-11-25T23:10:29+0000",
+    "description": "The AWS for Telecom team is excited to welcome you to AWS re:Invent 2025, from December 1-5, 2025, in Las Vegas, NV. AWS re:Invent brings together cloud and AI pioneers from across the globe—fostering collaborative innovation through peer-to-peer learning, expert-led discussions, and invaluable networking opportunities that catalyze cloud and AI innovation. Here, the global cloud [...]"
+  },
+  {
+    "title": "Orchestrating data processing tasks with a serverless visual workflow in Amazon SageMaker Unified Studio",
+    "link": "https://aws.amazon.com/blogs/big-data/orchestrating-data-processing-tasks-with-a-serverless-visual-workflow-in-amazon-sagemaker-unified-studio/",
+    "tags": [
+      "blog-posts#category-analytics#amazon-sagemaker-unified-studio",
+      "GLOBAL#content-type#blog-post",
+      "blog-posts#category-post-types#technical-how-to",
+      "blog-posts#category-learning-levels#advanced-300",
+      "blog-posts#category#post-types",
+      "GLOBAL#level#300",
+      "blog-posts#category#learning-levels",
+      "blog-posts#category#analytics"
+    ],
+    "authors": [
+      "Suba Palanisamy",
+      "Kamen Sharlandjiev",
+      "Gal Heyne",
+      "Yuhang Huang",
+      "Vinod Jayendra",
+      "Vasudevan Venkataramanan"
+    ],
+    "feature_image": "https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2025/11/25/BDB-5672-featured-images-300x169.png",
+    "date_created": "2025-11-25T23:08:32+0000",
+    "description": "In this post, we show how to use the new visual workflow experience in SageMaker Unified Studio IAM-based domains to orchestrate an end-to-end machine learning workflow. The workflow ingests weather data, applies transformations, and generates predictions—all through a single, intuitive interface, without writing any orchestration code."
+  },
+  {
+    "title": "Build Secure Data Mesh with AWS and Partner Solutions",
+    "link": "https://aws.amazon.com/blogs/industries/build-secure-data-mesh-with-aws-and-partner-solutions/",
+    "tags": [
+      "blog-posts#category-storage#amazon-simple-storage-services-s3",
+      "GLOBAL#product#s3",
+      "blog-posts#category-analytics#amazon-athena",
+      "GLOBAL#tech-category#analytics",
+      "GLOBAL#content-type#blog-post",
+      "GLOBAL#tech-category#storage",
+      "blog-posts#category#analytics",
+      "blog-posts#category#uncategorized",
+      "blog-posts#category-industries#financial-services",
+      "GLOBAL#product#athena",
+      "GLOBAL#tech-category#databases",
+      "blog-posts#category-analytics#amazon-sagemaker-lakehouse",
+      "GLOBAL#product#redshift",
+      "GLOBAL#product#lake-formation",
+      "blog-posts#category-analytics#amazon-sagemaker-unified-studio",
+      "blog-posts#category#database",
+      "blog-posts#category-database#amazon-redshift",
+      "blog-posts#category#industries",
+      "blog-posts#category-analytics#aws-lake-formation",
+      "blog-posts#category#storage",
+      "GLOBAL#industry#financial-services"
+    ],
+    "authors": [
+      "Misha Goussev",
+      "Adrianna Kurzela",
+      "Balaji Gopalan",
+      "Srividya Parthasarathy"
+    ],
+    "feature_image": "https://d2908q01vomqb2.cloudfront.net/c5b76da3e608d34edb07244cd9b875ee86906328/2025/07/28/Build-Secure-Data-Mesh-with-AWS-and-Partner-Solutions-300x169.png",
+    "date_created": "2025-11-25T23:03:19+0000",
+    "description": "Introduction Data mesh emerges as a transformative architectural paradigm that revolutionizes how organizations manage and share data across domains. By treating data as a product and decentralizing ownership to domain teams, data mesh enables scalable, secure, and efficient data sharing while preserving domain autonomy. This blog is intended for data architects and technical leaders who [...]"
+  },
+  {
+    "title": "AWS Secrets Manager launches Managed External Secrets for Third-Party Credentials",
+    "link": "https://aws.amazon.com/blogs/security/aws-secrets-manager-launches-managed-external-secrets-for-third-party-credentials/",
+    "tags": [
+      "blog-posts#category-learning-levels#intermediate-200",
+      "GLOBAL#product#secrets-mgr",
+      "GLOBAL#content-type#blog-post",
+      "blog-posts#category#security-identity-compliance",
+      "blog-posts#post-tags#security-blog",
+      "blog-posts#category-security-identity-compliance#aws-secrets-manager",
+      "blog-posts#category#learning-levels",
+      "blog-posts#category#post-types",
+      "blog-posts#category-post-types#technical-how-to",
+      "GLOBAL#level#200",
+      "GLOBAL#tech-category#security-identity-compliance"
+    ],
+    "authors": [
+      "Rohit Panjala",
+      "Rochak Karki"
+    ],
+    "feature_image": "https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2025/11/25/Medea-Blog-Main-Image-300x150.jpg",
+    "date_created": "2025-11-25T23:02:13+0000",
+    "description": "Although AWS Secrets Manager excels at managing the lifecycle of Amazon Web Services (AWS) secrets, managing credentials from third-party software providers presents unique challenges for organizations as they scale usage of their cloud applications. Organizations using multiple third-party services frequently develop different security approaches for each provider’s credentials because there hasn’t been a standardized way [...]"
+  },
+  {
+    "title": "Building a blockchain indexer on AWS",
+    "link": "https://aws.amazon.com/blogs/web3/building-a-blockchain-indexer-on-aws/",
+    "tags": [
+      "GLOBAL#content-type#blog-post",
+      "blog-posts#category#blockchain",
+      "blog-posts#category#post-types",
+      "GLOBAL#tech-category#databases",
+      "blog-posts#category-post-types#technical-how-to",
+      "GLOBAL#product#rds",
+      "blog-posts#category-analytics#amazon-managed-streaming-for-apache-kafka",
+      "blog-posts#category#analytics",
+      "blog-posts#category-database#amazon-rds",
+      "GLOBAL#product#kafka-managed-streaming",
+      "blog-posts#category#database",
+      "GLOBAL#tech-category#blockchain",
+      "GLOBAL#tech-category#analytics"
+    ],
+    "authors": [
+      "Christoph Niemann",
+      "Forrest Colyer",
+      "Arvind Raghu"
+    ],
+    "feature_image": "https://d2908q01vomqb2.cloudfront.net/d54ad009d179ae346683cfc3603979bc99339ef7/2025/11/25/build-blockchain-indexer-featured-image-300x169.png",
+    "date_created": "2025-11-25T22:52:49+0000",
+    "description": "Decentralized finance (DeFi) trading decisions require blockchain pricing and liquidity data. However, direct blockchain node queries are inefficient and resource-intensive creating a bottleneck for timely decision-making. Blockchains are not optimized for efficient data queries, with data being stored sequentially (block by block). Retrieving specific information often requires scanning the entire blockchain. Indexers offer a solution to [...]"
+  },
+  {
+    "title": "Train custom computer vision defect detection model using Amazon SageMaker",
+    "link": "https://aws.amazon.com/blogs/machine-learning/train-custom-computer-vision-defect-detection-model-using-amazon-sagemaker/",
+    "tags": [
+      "blog-posts#post-tags#amazon-machine-learning",
+      "GLOBAL#product#sagemaker",
+      "blog-posts#category-industries#manufacturing",
+      "GLOBAL#industry#manufacturing",
+      "GLOBAL#product#sagemaker-ground-truth",
+      "blog-posts#category-post-types#technical-how-to",
+      "blog-posts#category#post-types",
+      "GLOBAL#content-type#blog-post",
+      "blog-posts#post-tags#amazon-sagemaker-ground-truth",
+      "GLOBAL#tech-category#ai-ml",
+      "blog-posts#category#industries",
+      "blog-posts#post-tags#ai-ml",
+      "blog-posts#category#open-source",
+      "blog-posts#category-artificial-intelligence-sagemaker#amazon-sagemaker-autopilot",
+      "blog-posts#category-artificial-intelligence#sagemaker",
+      "blog-posts#category-artificial-intelligence#amazon-lookout-for-vision",
+      "blog-posts#category#artificial-intelligence",
+      "blog-posts#post-tags#amazon-sagemaker",
+      "blog-posts#category-artificial-intelligence-sagemaker#amazon-sagemaker-ground-truth",
+      "blog-posts#category-artificial-intelligence-sagemaker#amazon-sagemaker-ai",
+      "blog-posts#post-tags#computer-vision"
+    ],
+    "authors": [
+      "Ryan Vanderwerf",
+      "Kunle Adeleke",
+      "Lu Min",
+      "Tim Westman"
+    ],
+    "feature_image": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2025/11/10/image-6-2-300x244.jpeg",
+    "date_created": "2025-11-25T22:50:56+0000",
+    "description": "In this post, we demonstrate how to migrate computer vision workloads from Amazon Lookout for Vision to Amazon SageMaker AI by training custom defect detection models using pre-trained models available on AWS Marketplace. We provide step-by-step guidance on labeling datasets with SageMaker Ground Truth, training models with flexible hyperparameter configurations, and deploying them for real-time or batch inference—giving you greater control and flexibility for automated quality inspection use cases."
+  },
+  {
+    "title": "Node.js 24 runtime now available in AWS Lambda",
+    "link": "https://aws.amazon.com/blogs/compute/node-js-24-runtime-now-available-in-aws-lambda/",
+    "tags": [
+      "GLOBAL#product#lambda",
+      "blog-posts#category#programing-language",
+      "GLOBAL#content-type#blog-post",
+      "blog-posts#post-tags#serverless",
+      "blog-posts#category#developer-tools",
+      "blog-posts#category-programing-language#javascript",
+      "GLOBAL#tech-category#compute",
+      "GLOBAL#content-type#launch-announcement",
+      "blog-posts#category-developer-tools#aws-cloud-development-kit",
+      "GLOBAL#tech-category#networking-content-dev",
+      "blog-posts#category-compute#aws-lambda",
+      "blog-posts#category#serverless",
+      "blog-posts#category#networking-content-delivery",
+      "blog-posts#category#compute",
+      "blog-posts#category-networking-content-delivery#lambdaedge",
+      "GLOBAL#methodology#serverless",
+      "GLOBAL#tech-category#devtools",
+      "blog-posts#category#post-types",
+      "blog-posts#category-compute#aws-serverless-application-model",
+      "blog-posts#category-post-types#announcements"
+    ],
+    "authors": [
+      "Andrea Amorosi",
+      "Jonathan Tuliani"
+    ],
+    "feature_image": "https://d2908q01vomqb2.cloudfront.net/1b6453892473a467d07372d45eb05abc2031647a/2025/11/25/nodejs-24-runtime-featured-image-300x169.png",
+    "date_created": "2025-11-25T22:20:41+0000",
+    "description": "You can now develop AWS Lambda functions using Node.js 24, either as a managed runtime or using the container base image. Node.js 24 is in active LTS status and ready for production use. It is expected to be supported with security patches and bugfixes until April 2028. The Lambda runtime for Node.js 24 includes a new implementation of the [...]"
+  },
+  {
+    "title": "Simplify data integration using zero-ETL from self-managed databases to Amazon Redshift",
+    "link": "https://aws.amazon.com/blogs/database/simplify-data-integration-using-zero-etl-from-self-managed-databases-to-amazon-redshift/",
+    "tags": [
+      "GLOBAL#tech-category#databases",
+      "blog-posts#category#post-types",
+      "GLOBAL#level#300",
+      "blog-posts#category-database#amazon-redshift",
+      "blog-posts#category-post-types#technical-how-to",
+      "blog-posts#category-learning-levels#advanced-300",
+      "GLOBAL#product#redshift",
+      "blog-posts#category-database#aws-database-migration-service",
+      "GLOBAL#product#database-migration-service",
+      "GLOBAL#content-type#blog-post",
+      "blog-posts#category#learning-levels",
+      "blog-posts#category#database"
+    ],
+    "authors": [
+      "Alex Anto Kizhakeyyepunnil Joy",
+      "Johnson Mushonga",
+      "Yupeng Su",
+      "Changsheng Su",
+      "Shashank Kalki"
+    ],
+    "feature_image": "https://d2908q01vomqb2.cloudfront.net/887309d048beef83ad3eabf2a79a64a389ab1c9f/2025/11/25/DBBLOG-5190-300x169.png",
+    "date_created": "2025-11-25T21:12:20+0000",
+    "description": "In this post, we demonstrate how to set up a zero-ETL integration between self-managed databases such as MySQL, PostgreSQL, SQL Server, and Oracle to Amazon Redshift. The transactional data from the source gets replicated in near real time on the destination, which processes analytical queries."
+  },
+  {
+    "title": "Amazon Ads upgrades to Amazon ElastiCache for Valkey to achieve 12% higher throughput and save over 45% in infrastructure costs",
+    "link": "https://aws.amazon.com/blogs/database/amazon-ads-upgrades-to-amazon-elasticache-for-valkey-to-achieve-12-higher-throughput-and-save-over-45-in-infrastructure-costs/",
+    "tags": [
+      "GLOBAL#product#elasticache",
+      "blog-posts#category#learning-levels",
+      "GLOBAL#content-type#blog-post",
+      "GLOBAL#level#300",
+      "blog-posts#category#database",
+      "blog-posts#category-learning-levels#advanced-300",
+      "blog-posts#category-database#amazon-elasticache",
+      "GLOBAL#tech-category#databases",
+      "blog-posts#category#post-types",
+      "blog-posts#category-post-types#customer-solutions"
+    ],
+    "authors": [
+      "Mas Kubo",
+      "Hao Yuan",
+      "Jiahui Tao",
+      "Zheyu Zhu"
+    ],
+    "feature_image": "https://d2908q01vomqb2.cloudfront.net/887309d048beef83ad3eabf2a79a64a389ab1c9f/2025/11/25/DBBLOG-5065-300x169.png",
+    "date_created": "2025-11-25T21:10:16+0000",
+    "description": "Amazon Ads enables businesses to meaningfully engage with customers throughout their shopping journey, reaching over 300 million audience in the US alone. Delivering the right ad to the right customer in real time at a global scale requires highly available, low-latency infrastructure capable of processing tens of millions of requests per second. In this post, [...]"
+  },
+  {
+    "title": "Everything you don’t need to know about Amazon Aurora DSQL: Part 5 – How the service uses clocks",
+    "link": "https://aws.amazon.com/blogs/database/everything-you-dont-need-to-know-about-amazon-aurora-dsql-part-5-how-the-service-uses-clocks/",
+    "tags": [
+      "blog-posts#category#database",
+      "blog-posts#category-post-types#technical-how-to",
+      "blog-posts#category-database-amazon-aurora#dsql",
+      "blog-posts#category-learning-levels#advanced-300",
+      "blog-posts#category#post-types",
+      "GLOBAL#tech-category#databases",
+      "blog-posts#category-database#amazon-aurora",
+      "GLOBAL#product#aurora",
+      "GLOBAL#content-type#blog-post",
+      "GLOBAL#level#300",
+      "blog-posts#category#learning-levels"
+    ],
+    "authors": [
+      "Katja-Maja Kroedel"
+    ],
+    "feature_image": "https://d2908q01vomqb2.cloudfront.net/887309d048beef83ad3eabf2a79a64a389ab1c9f/2025/11/25/DBBLOG-4811-P5-300x169.png",
+    "date_created": "2025-11-25T21:07:00+0000",
+    "description": "In this post, I explore how Amazon Aurora DSQL uses Amazon Time Sync Service to build a hybrid logical clock solution."
+  },
+  {
+    "title": "Everything you don’t need to know about Amazon Aurora DSQL: Part 4 – DSQL components",
+    "link": "https://aws.amazon.com/blogs/database/everything-you-dont-need-to-know-about-amazon-aurora-dsql-part-4-dsql-components/",
+    "tags": [
+      "blog-posts#category-database-amazon-aurora#dsql",
+      "blog-posts#category-post-types#technical-how-to",
+      "GLOBAL#product#aurora",
+      "blog-posts#category#database",
+      "blog-posts#category-learning-levels#expert-400",
+      "GLOBAL#content-type#blog-post",
+      "blog-posts#category-database#amazon-aurora",
+      "GLOBAL#tech-category#databases",
+      "blog-posts#category#post-types",
+      "blog-posts#category#learning-levels",
+      "GLOBAL#level#400"
+    ],
+    "authors": [
+      "Katja-Maja Kroedel"
+    ],
+    "feature_image": "https://d2908q01vomqb2.cloudfront.net/887309d048beef83ad3eabf2a79a64a389ab1c9f/2025/11/25/DBBLOG-4811-P4-300x169.png",
+    "date_created": "2025-11-25T21:06:49+0000",
+    "description": "Amazon Aurora DSQL employs an active-active distributed database design, wherein all database resources are peers and serve both write and read traffic within a Region and across Regions. This design facilitates synchronous data replication and automated zero data loss failover for single and multi-Region Aurora DSQL clusters. In this post, I discuss the individual components and the responsibilities of a multi-Region distributed database to provide an ACID-compliant, strongly consistent relational database."
+  },
+  {
+    "title": "Everything you don’t need to know about Amazon Aurora DSQL: Part 3 – Transaction processing",
+    "link": "https://aws.amazon.com/blogs/database/everything-you-dont-need-to-know-about-amazon-aurora-dsql-part-3-transaction-processing/",
+    "tags": [
+      "blog-posts#category#database",
+      "GLOBAL#content-type#blog-post",
+      "blog-posts#category-learning-levels#expert-400",
+      "blog-posts#category-database#amazon-aurora",
+      "GLOBAL#tech-category#databases",
+      "blog-posts#category#learning-levels",
+      "blog-posts#category-database-amazon-aurora#dsql",
+      "blog-posts#category#post-types",
+      "blog-posts#category-post-types#technical-how-to",
+      "GLOBAL#level#400",
+      "GLOBAL#product#aurora"
+    ],
+    "authors": [
+      "Katja-Maja Kroedel"
+    ],
+    "feature_image": "https://d2908q01vomqb2.cloudfront.net/887309d048beef83ad3eabf2a79a64a389ab1c9f/2025/11/25/DBBLOG-4811-P3-300x169.png",
+    "date_created": "2025-11-25T21:06:40+0000",
+    "description": "In this third post of the series, I examine the end-to-end processing of the two transaction types in Aurora DSQL: read-only and read-write. Amazon Aurora DSQL doesn’t have write-only transactions, since it’s imperative to verify the table schema or ensure the uniqueness of primary keys on each change – which results them being read-write transactions as well."
+  },
+  {
+    "title": "Everything you don’t need to know about Amazon Aurora DSQL: Part 2 – Shallow view",
+    "link": "https://aws.amazon.com/blogs/database/everything-you-dont-need-to-know-about-amazon-aurora-dsql-part-2-shallow-view/",
+    "tags": [
+      "GLOBAL#level#200",
+      "blog-posts#category-database-amazon-aurora#dsql",
+      "blog-posts#category#post-types",
+      "blog-posts#category-learning-levels#intermediate-200",
+      "blog-posts#category#learning-levels",
+      "GLOBAL#product#aurora",
+      "blog-posts#category#database",
+      "blog-posts#category-database#amazon-aurora",
+      "GLOBAL#content-type#blog-post",
+      "GLOBAL#tech-category#databases",
+      "blog-posts#category-post-types#technical-how-to"
+    ],
+    "authors": [
+      "Katja-Maja Kroedel"
+    ],
+    "feature_image": "https://d2908q01vomqb2.cloudfront.net/887309d048beef83ad3eabf2a79a64a389ab1c9f/2025/11/25/DBBLOG-4811-P2-300x169.png",
+    "date_created": "2025-11-25T21:06:30+0000",
+    "description": "In this second post, I examine Aurora DSQL’s architecture and explain how its design decisions impact functionality—such as optimistic locking and PostgreSQL feature support—so you can assess compatibility with your applications. I provide a comprehensive overview of the underlying architecture, which is fully abstracted from the user."
+  },
+  {
+    "title": "Everything you don’t need to know about Amazon Aurora DSQL: Part 1 – Setting the scene",
+    "link": "https://aws.amazon.com/blogs/database/everything-you-dont-need-to-know-about-amazon-aurora-dsql-part-1-setting-the-scene/",
+    "tags": [
+      "GLOBAL#product#aurora",
+      "blog-posts#category-database#amazon-aurora",
+      "blog-posts#category-learning-levels#foundational-100",
+      "GLOBAL#tech-category#databases",
+      "blog-posts#category-database-amazon-aurora#dsql",
+      "GLOBAL#content-type#blog-post",
+      "blog-posts#category-post-types#technical-how-to",
+      "blog-posts#category#database",
+      "blog-posts#category#post-types",
+      "GLOBAL#level#100",
+      "blog-posts#category#learning-levels"
+    ],
+    "authors": [
+      "Katja-Maja Kroedel"
+    ],
+    "feature_image": "https://d2908q01vomqb2.cloudfront.net/887309d048beef83ad3eabf2a79a64a389ab1c9f/2025/11/25/DBBLOG-4811-P1-300x169.png",
+    "date_created": "2025-11-25T21:06:04+0000",
+    "description": "In this post, I dive deep into fundamental concepts that are important to comprehend the benefits of Aurora DSQL, its feature set, and its underlying components."
+  }
+]

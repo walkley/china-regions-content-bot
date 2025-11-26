@@ -11,9 +11,7 @@
       ]
     }
   },
-  "resources": [
-    "file://unavailable_services.txt"
-  ],
+  "resources": [],
   "hooks": {
     "agentSpawn": [
       {

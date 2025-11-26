@@ -1,12 +1,34 @@
 {
-  "generated_at": "2025-11-25T12:45:55.113561Z",
+  "generated_at": "2025-11-26T00:20:42.571286Z",
   "statistics": {
-    "total": 89,
-    "high": 23,
-    "moderate": 7,
-    "low": 59
+    "total": 214,
+    "high": 65,
+    "moderate": 17,
+    "low": 132
   },
   "reports": [
+    {
+      "title": "从云计算新手到获奖游戏开发者：AWS Cloud Institute之旅",
+      "publish_date": "2025-04-01",
+      "url": "reports/a_journey_with_aws_cloud_institute_fd4ac927/",
+      "original_url": "https://aws.amazon.com/blogs/training-and-certification/a-journey-with-aws-cloud-institute/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "MODERATE",
+      "available_services": 5,
+      "unavailable_services": 2
+    },
+    {
+      "title": "使用Amazon Bedrock API密钥加速AI开发",
+      "publish_date": "2025-07-08",
+      "url": "reports/accelerate_ai_development_with_amazon_bedrock_api_keys_82d0f909/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/accelerate-ai-development-with-amazon-bedrock-api-keys/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 3,
+      "unavailable_services": 1
+    },
     {
       "title": "使用新一代Amazon SageMaker加速分析和AI创新",
       "publish_date": "2025-03-13",
@@ -17,6 +39,39 @@
       "feasibility": "LOW",
       "available_services": 16,
       "unavailable_services": 4
+    },
+    {
+      "title": "使用生成式AI加速AWS Well-Architected审查",
+      "publish_date": "2025-03-04",
+      "url": "reports/accelerate_aws_well_architected_reviews_with_generative_ai_857bc348/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/accelerate-aws-well-architected-reviews-with-generative-ai/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 13,
+      "unavailable_services": 3
+    },
+    {
+      "title": "使用 Amazon Bedrock AgentCore MCP 服务器加速开发",
+      "publish_date": "2025-10-02",
+      "url": "reports/accelerate_development_with_the_amazon_bedrock_agentcore_mcpserver_b71ee059/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/accelerate-development-with-the-amazon-bedrock-agentcore-mcpserver/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 3,
+      "unavailable_services": 1
+    },
+    {
+      "title": "使用代理AI驱动的咨询加速企业解决方案：介绍AWS专业服务代理",
+      "publish_date": "2025-11-17",
+      "url": "reports/accelerate_enterprise_solutions_with_agentic_ai_powered_consulting_introducing_aws_professional_service_agents_5ea5ff4a/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/accelerate-enterprise-solutions-with-agentic-ai-powered-consulting-introducing-aws-professional-service-agents/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 1,
+      "unavailable_services": 2
     },
     {
       "title": "使用全新 Amazon EC2 P6-B300 实例加速大规模 AI 应用",
@@ -30,6 +85,39 @@
       "unavailable_services": 0
     },
     {
+      "title": "使用Amazon ECS内置蓝绿部署加速安全软件发布",
+      "publish_date": "2025-07-17",
+      "url": "reports/accelerate_safe_software_releases_with_new_built_in_blue_green_deployments_in_amazon_ecs_f0e57b47/",
+      "original_url": "https://aws.amazon.com/blogs/aws/accelerate-safe-software-releases-with-new-built-in-blue-green-deployments-in-amazon-ecs/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 6,
+      "unavailable_services": 0
+    },
+    {
+      "title": "使用VS Code IDE中的LocalStack集成加速无服务器测试",
+      "publish_date": "2025-09-11",
+      "url": "reports/accelerate_serverless_testing_with_localstack_integration_in_vs_code_ide_7d0d7720/",
+      "original_url": "https://aws.amazon.com/blogs/aws/accelerate-serverless-testing-with-localstack-integration-in-vs-code-ide/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 8,
+      "unavailable_services": 0
+    },
+    {
+      "title": "使用 AWS Transform 加速大型机和 VMware 工作负载的现代化",
+      "publish_date": "2025-05-15",
+      "url": "reports/accelerate_the_modernization_of_mainframe_and_vmware_workloads_with_aws_transform_080ca1d7/",
+      "original_url": "https://aws.amazon.com/blogs/aws/accelerate-the-modernization-of-mainframe-and-vmware-workloads-with-aws-transform/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 7,
+      "unavailable_services": 1
+    },
+    {
       "title": "使用AWS Step Functions增强的本地测试加速工作流开发",
       "publish_date": "2025-11-19",
       "url": "reports/accelerate_workflow_development_with_enhanced_local_testing_in_aws_step_functions_75f5b43d/",
@@ -39,6 +127,61 @@
       "feasibility": "HIGH",
       "available_services": 3,
       "unavailable_services": 0
+    },
+    {
+      "title": "通过AWS培训和认证加速您的AWS迁移",
+      "publish_date": "2025-04-09",
+      "url": "reports/accelerate_your_aws_migration_9a6e4b13/",
+      "original_url": "https://aws.amazon.com/blogs/training-and-certification/accelerate-your-aws-migration/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 6,
+      "unavailable_services": 1
+    },
+    {
+      "title": "使用 Amazon EKS 模型上下文协议服务器加速应用程序开发",
+      "publish_date": "2025-05-29",
+      "url": "reports/accelerating_application_development_with_the_amazon_eks_model_context_protocol_server_af3f3242/",
+      "original_url": "https://aws.amazon.com/blogs/containers/accelerating-application-development-with-the-amazon-eks-model-context-protocol-server/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 4,
+      "unavailable_services": 1
+    },
+    {
+      "title": "使用AWS上的Agentic AI加速生命科学创新",
+      "publish_date": "2025-05-19",
+      "url": "reports/accelerating_life_sciences_innovation_with_agentic_ai_on_aws_33a7cf80/",
+      "original_url": "https://aws.amazon.com/blogs/industries/accelerating-life-sciences-innovation-with-agentic-ai-on-aws/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 2,
+      "unavailable_services": 3
+    },
+    {
+      "title": "通过AWS Glue Iceberg REST端点使用PyIceberg访问Amazon S3 Tables中的数据",
+      "publish_date": "2025-02-17",
+      "url": "reports/access_data_in_amazon_s3_tables_using_pyiceberg_through_the_aws_glue_iceberg_rest_endpoint_08cd1ac6/",
+      "original_url": "https://aws.amazon.com/blogs/storage/access-data-in-amazon-s3-tables-using-pyiceberg-through-the-aws-glue-iceberg-rest-endpoint/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 7,
+      "unavailable_services": 1
+    },
+    {
+      "title": "将Zoom添加为Amazon Q索引的数据访问器",
+      "publish_date": "2025-04-17",
+      "url": "reports/add_zoom_as_a_data_accessor_to_your_amazon_q_index_c9252766/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/add-zoom-as-a-data-accessor-to-your-amazon-q-index/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 1,
+      "unavailable_services": 1
     },
     {
       "title": "AI驱动的开发生命周期：重新构想软件工程",
@@ -52,6 +195,28 @@
       "unavailable_services": 1
     },
     {
+      "title": "AI生命周期风险管理：ISO/IEC 42001:2023 AI治理标准",
+      "publish_date": "2025-05-13",
+      "url": "reports/ai_lifecycle_risk_management_iso_iec_420012023_for_ai_governance_00f39714/",
+      "original_url": "https://aws.amazon.com/blogs/security/ai-lifecycle-risk-management-iso-iec-420012023-for-ai-governance/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "MODERATE",
+      "available_services": 12,
+      "unavailable_services": 2
+    },
+    {
+      "title": "Amazon Aurora DSQL 正式发布，最快的无服务器分布式SQL数据库",
+      "publish_date": "2025-05-27",
+      "url": "reports/amazon_aurora_dsql_is_now_generally_available_8fd034d7/",
+      "original_url": "https://aws.amazon.com/blogs/aws/amazon-aurora-dsql-is-now-generally-available/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 10,
+      "unavailable_services": 2
+    },
+    {
       "title": "使用 Amazon Bedrock AgentCore 让 AI 代理成为现实：现已正式发布",
       "publish_date": "2025-10-13",
       "url": "reports/amazon_bedrock_agentcore_is_now_generally_available_2573981d/",
@@ -63,6 +228,50 @@
       "unavailable_services": 1
     },
     {
+      "title": "Amazon Bedrock AgentCore Memory：构建上下文感知的智能代理",
+      "publish_date": "2025-08-13",
+      "url": "reports/amazon_bedrock_agentcore_memory_building_context_aware_agents_a100bbf3/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-memory-building-context-aware-agents/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 2,
+      "unavailable_services": 1
+    },
+    {
+      "title": "Amazon Bedrock 宣布多代理协作功能正式发布",
+      "publish_date": "2025-03-10",
+      "url": "reports/amazon_bedrock_announces_general_availability_of_multi_agent_collaboration_0dfd5f9a/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-announces-general-availability-of-multi-agent-collaboration/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 3,
+      "unavailable_services": 1
+    },
+    {
+      "title": "Amazon Bedrock 现已可供合作伙伴转售",
+      "publish_date": "2025-10-14",
+      "url": "reports/amazon_bedrock_now_available_for_partner_resale_2c28344d/",
+      "original_url": "https://aws.amazon.com/blogs/apn/amazon-bedrock-now-available-for-partner-resale/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 0,
+      "unavailable_services": 1
+    },
+    {
+      "title": "Amazon阻止俄罗斯APT29水坑攻击活动",
+      "publish_date": "2025-08-29",
+      "url": "reports/amazon_disrupts_watering_hole_campaign_by_russias_apt29_60089062/",
+      "original_url": "https://aws.amazon.com/blogs/security/amazon-disrupts-watering-hole-campaign-by-russias-apt29/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 1,
+      "unavailable_services": 0
+    },
+    {
       "title": "Amazon DynamoDB多租户数据建模 - 第1部分",
       "publish_date": "2025-05-16",
       "url": "reports/amazon_dynamodb_data_modeling_for_multi_tenancy_part_1_e5ffa2ef/",
@@ -72,6 +281,61 @@
       "feasibility": "HIGH",
       "available_services": 2,
       "unavailable_services": 0
+    },
+    {
+      "title": "Amazon EKS 支持超大规模 AI/ML 工作负载，单集群可达 100K 节点",
+      "publish_date": "2025-07-16",
+      "url": "reports/amazon_eks_enables_ultra_scale_ai_ml_workloads_with_support_for_100k_nodes_per_cluster_b43de246/",
+      "original_url": "https://aws.amazon.com/blogs/containers/amazon-eks-enables-ultra-scale-ai-ml-workloads-with-support-for-100k-nodes-per-cluster/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 5,
+      "unavailable_services": 0
+    },
+    {
+      "title": "Amazon Elastic Kubernetes Service 零操作员访问设计获得独立验证",
+      "publish_date": "2025-11-12",
+      "url": "reports/amazon_elastic_kubernetes_service_gets_independent_affirmation_of_its_zero_operator_access_design_db2241d8/",
+      "original_url": "https://aws.amazon.com/blogs/security/amazon-elastic-kubernetes-service-gets-independent-affirmation-of-its-zero-operator-access-design/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 7,
+      "unavailable_services": 0
+    },
+    {
+      "title": "Amazon推出SWE-PolyBench：用于AI编码代理的多语言基准测试工具",
+      "publish_date": "2025-04-23",
+      "url": "reports/amazon_introduces_swe_polybench_a_multi_lingual_benchmark_for_ai_coding_agents_ad3edd31/",
+      "original_url": "https://aws.amazon.com/blogs/devops/amazon-introduces-swe-polybench-a-multi-lingual-benchmark-for-ai-coding-agents/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 0,
+      "unavailable_services": 1
+    },
+    {
+      "title": "Amazon Nova Canvas更新：虚拟试穿和风格选项现已可用",
+      "publish_date": "2025-07-02",
+      "url": "reports/amazon_nova_canvas_update_virtual_try_on_and_style_options_now_available_e40bdc64/",
+      "original_url": "https://aws.amazon.com/blogs/aws/amazon-nova-canvas-update-virtual-try-on-and-style-options-now-available/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 0,
+      "unavailable_services": 2
+    },
+    {
+      "title": "Amazon Nova多模态嵌入：用于智能RAG和语义搜索的最先进嵌入模型",
+      "publish_date": "2025-10-28",
+      "url": "reports/amazon_nova_multimodal_embeddings_now_available_in_amazon_bedrock_bf0af0a0/",
+      "original_url": "https://aws.amazon.com/blogs/aws/amazon-nova-multimodal-embeddings-now-available-in-amazon-bedrock/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 2,
+      "unavailable_services": 3
     },
     {
       "title": "Amazon Nova Premier：用于复杂任务和模型蒸馏的最强大模型",
@@ -96,6 +360,72 @@
       "unavailable_services": 1
     },
     {
+      "title": "智能编码触手可及：在IDE中引入代理编码体验",
+      "publish_date": "2025-05-05",
+      "url": "reports/amazon_q_developer_agentic_coding_experience_ecb2e332/",
+      "original_url": "https://aws.amazon.com/blogs/devops/amazon-q-developer-agentic-coding-experience/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 4,
+      "unavailable_services": 1
+    },
+    {
+      "title": "Amazon Q Developer 通过新的智能编码体验提升 IDE 开发体验",
+      "publish_date": "2025-05-02",
+      "url": "reports/amazon_q_developer_elevates_the_ide_experience_with_new_agentic_coding_experience_158d0589/",
+      "original_url": "https://aws.amazon.com/blogs/aws/amazon-q-developer-elevates-the-ide-experience-with-new-agentic-coding-experience/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 0,
+      "unavailable_services": 2
+    },
+    {
+      "title": "GitHub中的Amazon Q Developer（预览版）加速代码生成",
+      "publish_date": "2025-05-05",
+      "url": "reports/amazon_q_developer_in_github_now_in_preview_with_code_generation_review_and_legacy_transformation_capabilities_4ee669d0/",
+      "original_url": "https://aws.amazon.com/blogs/aws/amazon-q-developer-in-github-now-in-preview-with-code-generation-review-and-legacy-transformation-capabilities/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 0,
+      "unavailable_services": 2
+    },
+    {
+      "title": "Amazon Redshift Python用户定义函数将在2026年6月30日后停止支持",
+      "publish_date": "2025-06-30",
+      "url": "reports/amazon_redshift_python_user_defined_functions_will_reach_end_of_support_after_june_30_2026_2b716fc0/",
+      "original_url": "https://aws.amazon.com/blogs/big-data/amazon-redshift-python-user-defined-functions-will-reach-end-of-support-after-june-30-2026/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 5,
+      "unavailable_services": 0
+    },
+    {
+      "title": "使用Amazon Connect Tasks通过联系后调查分析客户满意度评分",
+      "publish_date": "2025-11-12",
+      "url": "reports/analyze_customer_satisfaction_scores_with_post_contact_surveys_using_amazon_connect_tasks_02299429/",
+      "original_url": "https://aws.amazon.com/blogs/contact-center/analyze-customer-satisfaction-scores-with-post-contact-surveys-using-amazon-connect-tasks/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 10,
+      "unavailable_services": 1
+    },
+    {
+      "title": "宣布2025年AWS合作伙伴奖项提名",
+      "publish_date": "2025-07-11",
+      "url": "reports/announcing_2025_aws_partner_award_nominations_ce36869a/",
+      "original_url": "https://aws.amazon.com/blogs/apn/announcing-2025-aws-partner-award-nominations/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 0,
+      "unavailable_services": 0
+    },
+    {
       "title": "宣布推出Amazon ECS托管实例用于容器化应用",
       "publish_date": "2025-09-30",
       "url": "reports/announcing_amazon_ecs_managed_instances_for_containerized_applications_a71cb389/",
@@ -116,6 +446,28 @@
       "feasibility": "LOW",
       "available_services": 1,
       "unavailable_services": 2
+    },
+    {
+      "title": "发布第二代AWS Outposts机架，实现本地部署的突破性性能和可扩展性",
+      "publish_date": "2025-04-29",
+      "url": "reports/announcing_second_generation_aws_outposts_racks_with_breakthrough_performance_and_scalability_on_premises_1143713c/",
+      "original_url": "https://aws.amazon.com/blogs/aws/announcing-second-generation-aws-outposts-racks-with-breakthrough-performance-and-scalability-on-premises/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 2,
+      "unavailable_services": 1
+    },
+    {
+      "title": "发布AWS Well-Architected生成式AI框架",
+      "publish_date": "2025-04-17",
+      "url": "reports/announcing_the_aws_well_architected_generative_ai_lens_f9950dec/",
+      "original_url": "https://aws.amazon.com/blogs/architecture/announcing-the-aws-well-architected-generative-ai-lens/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 4,
+      "unavailable_services": 0
     },
     {
       "title": "宣布推出全新AWS亚太（泰国）区域",
@@ -140,6 +492,17 @@
       "unavailable_services": 0
     },
     {
+      "title": "AWS Security Token Service 全局端点即将变更公告",
+      "publish_date": "2025-01-27",
+      "url": "reports/announcing_upcoming_changes_to_the_aws_security_token_service_global_endpoint_f3012dce/",
+      "original_url": "https://aws.amazon.com/blogs/security/announcing-upcoming-changes-to-the-aws-security-token-service-global-endpoint/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 3,
+      "unavailable_services": 0
+    },
+    {
       "title": "Anthropic的Claude 3.7 Sonnet混合推理模型现已在Amazon Bedrock中提供",
       "publish_date": "2025-02-24",
       "url": "reports/anthropics_claude_3_7_sonnet_the_first_hybrid_reasoning_model_is_now_available_in_amazon_bedrock_39c78848/",
@@ -151,6 +514,28 @@
       "unavailable_services": 2
     },
     {
+      "title": "Anthropic的Claude企业版现已在AWS Marketplace上线",
+      "publish_date": "2025-07-15",
+      "url": "reports/anthropics_claude_for_enterprise_now_available_in_aws_marketplace_821f18cd/",
+      "original_url": "https://aws.amazon.com/blogs/awsmarketplace/anthropics-claude-for-enterprise-now-available-in-aws-marketplace/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "MODERATE",
+      "available_services": 6,
+      "unavailable_services": 1
+    },
+    {
+      "title": "将关系数据库归档到Amazon S3 Glacier存储类以优化成本",
+      "publish_date": "2025-01-28",
+      "url": "reports/archiving_relational_databases_to_amazon_s3_glacier_storage_classes_for_cost_optimization_0453e848/",
+      "original_url": "https://aws.amazon.com/blogs/storage/archiving-relational-databases-to-amazon-s3-glacier-storage-classes-for-cost-optimization/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 14,
+      "unavailable_services": 0
+    },
+    {
       "title": "使用AWS代理AI迁移基于VMware的工作负载的选项",
       "publish_date": "2025-06-04",
       "url": "reports/aws_agentic_ai_options_for_migrating_vmware_based_workloads_c5b72d8f/",
@@ -160,6 +545,39 @@
       "feasibility": "LOW",
       "available_services": 7,
       "unavailable_services": 3
+    },
+    {
+      "title": "配备NVIDIA Blackwell的AWS AI基础设施：面向AI下一前沿的两种强大计算解决方案",
+      "publish_date": "2025-07-09",
+      "url": "reports/aws_ai_infrastructure_with_nvidia_blackwell_two_powerful_compute_solutions_for_the_next_frontier_of_ai_2637b2b8/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/aws-ai-infrastructure-with-nvidia-blackwell-two-powerful-compute-solutions-for-the-next-frontier-of-ai/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 6,
+      "unavailable_services": 0
+    },
+    {
+      "title": "AWS发布账单和成本管理MCP服务器",
+      "publish_date": "2025-08-22",
+      "url": "reports/aws_announces_billing_and_cost_management_mcp_server_3b300673/",
+      "original_url": "https://aws.amazon.com/blogs/aws-cloud-financial-management/aws-announces-billing-and-cost-management-mcp-server/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 12,
+      "unavailable_services": 0
+    },
+    {
+      "title": "AWS Certificate Manager推出可导出的公共SSL/TLS证书",
+      "publish_date": "2025-06-17",
+      "url": "reports/aws_certificate_manager_introduces_exportable_public_ssl_tls_certificates_to_use_anywhere_f7f620d8/",
+      "original_url": "https://aws.amazon.com/blogs/aws/aws-certificate-manager-introduces-exportable-public-ssl-tls-certificates-to-use-anywhere/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 8,
+      "unavailable_services": 0
     },
     {
       "title": "AWS Cloud Institute首批毕业生",
@@ -184,6 +602,17 @@
       "unavailable_services": 1
     },
     {
+      "title": "AWS生成式AI创新中心投资翻倍，标志着两年客户成功里程碑",
+      "publish_date": "2025-07-15",
+      "url": "reports/aws_doubles_investment_in_aws_generative_ai_innovation_center_marking_two_years_of_customer_success_760f2212/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/aws-doubles-investment-in-aws-generative-ai-innovation-center-marking-two-years-of-customer-success/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 4,
+      "unavailable_services": 3
+    },
+    {
       "title": "在AWS上开启游戏开发培训之旅",
       "publish_date": "2025-03-03",
       "url": "reports/aws_for_games_28ce53c6/",
@@ -195,6 +624,28 @@
       "unavailable_services": 0
     },
     {
+      "title": "AWS免费套餐更新：新客户可获得高达200美元积分开始探索AWS",
+      "publish_date": "2025-07-15",
+      "url": "reports/aws_free_tier_update_new_customers_can_get_started_and_explore_aws_with_up_to_200_in_credits_c0f31f7f/",
+      "original_url": "https://aws.amazon.com/blogs/aws/aws-free-tier-update-new-customers-can-get-started-and-explore-aws-with-up-to-200-in-credits/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 5,
+      "unavailable_services": 1
+    },
+    {
+      "title": "AWS开发者生成式AI专业证书",
+      "publish_date": "2025-07-22",
+      "url": "reports/aws_generative_ai_for_developers_professional_certificate_c274a060/",
+      "original_url": "https://aws.amazon.com/blogs/training-and-certification/aws-generative-ai-for-developers-professional-certificate/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 1,
+      "unavailable_services": 2
+    },
+    {
       "title": "AWS Lambda通过SQS事件源映射的预配置模式增强事件处理能力",
       "publish_date": "2025-11-14",
       "url": "reports/aws_lambda_enhances_sqs_processing_with_new_provisioned_mode_3x_faster_scaling_16x_higher_capacity_15a89779/",
@@ -203,6 +654,17 @@
       "target_region": "cn-northwest-1",
       "feasibility": "LOW",
       "available_services": 6,
+      "unavailable_services": 0
+    },
+    {
+      "title": "AWS Lambda为Amazon CloudWatch日志引入分层定价并支持额外的日志目标",
+      "publish_date": "2025-05-01",
+      "url": "reports/aws_lambda_introduces_tiered_pricing_for_amazon_cloudwatch_logs_and_additional_logging_destinations_ca11ea39/",
+      "original_url": "https://aws.amazon.com/blogs/compute/aws-lambda-introduces-tiered-pricing-for-amazon-cloudwatch-logs-and-additional-logging-destinations/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 13,
       "unavailable_services": 0
     },
     {
@@ -217,6 +679,39 @@
       "unavailable_services": 0
     },
     {
+      "title": "AWS Marketplace宣布即将扩展SaaS产品目录",
+      "publish_date": "2025-02-25",
+      "url": "reports/aws_marketplace_announces_upcoming_expansion_to_saas_product_catalog_6e8335dd/",
+      "original_url": "https://aws.amazon.com/blogs/awsmarketplace/aws-marketplace-announces-upcoming-expansion-to-saas-product-catalog/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 2,
+      "unavailable_services": 0
+    },
+    {
+      "title": "AWS连续15年被评为2025年Gartner战略云平台服务魔力象限领导者",
+      "publish_date": "2025-08-15",
+      "url": "reports/aws_named_as_a_leader_in_2025_gartner_magic_quadrant_for_strategic_cloud_platform_services_for_15_years_in_a_row_8a55d74d/",
+      "original_url": "https://aws.amazon.com/blogs/aws/aws-named-as-a-leader-in-2025-gartner-magic-quadrant-for-strategic-cloud-platform-services-for-15-years-in-a-row/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 5,
+      "unavailable_services": 0
+    },
+    {
+      "title": "AWS被评为2025年Gartner AI代码助手魔力象限领导者",
+      "publish_date": "2025-09-19",
+      "url": "reports/aws_named_as_a_leader_in_the_2025_gartner_magic_quadrant_for_ai_code_assistants_d79c999d/",
+      "original_url": "https://aws.amazon.com/blogs/devops/aws-named-as-a-leader-in-the-2025-gartner-magic-quadrant-for-ai-code-assistants/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 4,
+      "unavailable_services": 1
+    },
+    {
       "title": "AWS合作伙伴盈利框架：深化和多元化您的产品",
       "publish_date": "2025-03-10",
       "url": "reports/aws_partner_profitability_framework_deepen_and_diversify_your_offerings_7643931a/",
@@ -226,6 +721,28 @@
       "feasibility": "HIGH",
       "available_services": 10,
       "unavailable_services": 0
+    },
+    {
+      "title": "AWS re/Start 与 Momentum：为科技行业女性构建职业发展路径",
+      "publish_date": "2025-03-31",
+      "url": "reports/aws_re_start_women_in_tech_e1f3b204/",
+      "original_url": "https://aws.amazon.com/blogs/training-and-certification/aws-re-start-women-in-tech/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 3,
+      "unavailable_services": 0
+    },
+    {
+      "title": "AWS Transform for .NET：首个用于大规模现代化.NET应用程序的代理式AI服务",
+      "publish_date": "2025-05-15",
+      "url": "reports/aws_transform_for_net_the_first_agentic_ai_service_for_modernizing_net_applications_at_scale_fe5701f6/",
+      "original_url": "https://aws.amazon.com/blogs/aws/aws-transform-for-net-the-first-agentic-ai-service-for-modernizing-net-applications-at-scale/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 0,
+      "unavailable_services": 2
     },
     {
       "title": "使用代理式AI将企业工作负载转换速度提升4倍",
@@ -272,6 +789,17 @@
       "unavailable_services": 3
     },
     {
+      "title": "使用FloTorch对Amazon Nova和GPT-4o模型进行基准测试",
+      "publish_date": "2025-03-11",
+      "url": "reports/benchmarking_amazon_nova_and_gpt_4o_models_with_flotorch_ca8d7f45/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/benchmarking-amazon-nova-and-gpt-4o-models-with-flotorch/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 7,
+      "unavailable_services": 2
+    },
+    {
       "title": "AWS扩展AI认证组合并更新安全认证",
       "publish_date": "2025-10-14",
       "url": "reports/big_news_aws_expands_ai_certification_portfolio_and_updates_security_certification_db2fd3e1/",
@@ -281,6 +809,28 @@
       "feasibility": "MODERATE",
       "available_services": 2,
       "unavailable_services": 1
+    },
+    {
+      "title": "使用LangGraph和Mistral在AWS上构建多智能体系统",
+      "publish_date": "2025-03-06",
+      "url": "reports/build_a_multi_agent_system_with_langgraph_and_mistral_on_aws_7fdcceed/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/build-a-multi-agent-system-with-langgraph-and-mistral-on-aws/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 4,
+      "unavailable_services": 1
+    },
+    {
+      "title": "在3小时内使用AWS IoT Device Client构建IoT概念验证解决方案",
+      "publish_date": "2025-01-08",
+      "url": "reports/build_a_proof_of_concept_iot_solution_in_under_3_hours_with_the_aws_iot_device_client_583db4de/",
+      "original_url": "https://aws.amazon.com/blogs/iot/build-a-proof-of-concept-iot-solution-in-under-3-hours-with-the-aws-iot-device-client/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 3,
+      "unavailable_services": 0
     },
     {
       "title": "使用DeepSeek-R1、CrewAI和Amazon SageMaker AI构建智能体AI解决方案",
@@ -305,6 +855,17 @@
       "unavailable_services": 1
     },
     {
+      "title": "使用Amazon Q Business和Amazon S3可点击URL构建AI助手",
+      "publish_date": "2025-08-05",
+      "url": "reports/build_an_ai_assistant_using_amazon_q_business_with_amazon_s3_clickable_urls_a16e5f65/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/build-an-ai-assistant-using-amazon-q-business-with-amazon-s3-clickable-urls/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 5,
+      "unavailable_services": 1
+    },
+    {
       "title": "使用Amazon Q CLI和MCP构建AWS架构图",
       "publish_date": "2025-06-30",
       "url": "reports/build_aws_architecture_diagrams_using_amazon_q_cli_and_mcp_366baba0/",
@@ -314,6 +875,17 @@
       "feasibility": "LOW",
       "available_services": 26,
       "unavailable_services": 3
+    },
+    {
+      "title": "使用Amazon Bedrock知识库构建GraphRAG应用",
+      "publish_date": "2025-06-02",
+      "url": "reports/build_graphrag_applications_using_amazon_bedrock_knowledge_bases_61d37f6e/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/build-graphrag-applications-using-amazon-bedrock-knowledge-bases/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 8,
+      "unavailable_services": 1
     },
     {
       "title": "使用LangGraph和Amazon Bedrock构建多智能体系统",
@@ -338,6 +910,39 @@
       "unavailable_services": 1
     },
     {
+      "title": "使用RAG构建基于生成式AI的文本转SQL应用程序，由Amazon Bedrock（Claude 3 Sonnet和Amazon Titan嵌入）提供支持",
+      "publish_date": "2025-03-18",
+      "url": "reports/build_your_gen_ai_based_text_to_sql_application_using_rag_powered_by_amazon_bedrock_claude_3_sonnet_and_amazon_titan_for_embedding_5ef395c2/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/build-your-gen-ai-based-text-to-sql-application-using-rag-powered-by-amazon-bedrock-claude-3-sonnet-and-amazon-titan-for-embedding/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 2,
+      "unavailable_services": 1
+    },
+    {
+      "title": "在AWS上为公共部门构建大型语言模型",
+      "publish_date": "2025-10-27",
+      "url": "reports/building_large_language_models_for_the_public_sector_on_aws_49ef9401/",
+      "original_url": "https://aws.amazon.com/blogs/publicsector/building-large-language-models-for-the-public-sector-on-aws/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 13,
+      "unavailable_services": 1
+    },
+    {
+      "title": "使用Amazon SQS公平队列构建弹性多租户系统",
+      "publish_date": "2025-07-21",
+      "url": "reports/building_resilient_multi_tenant_systems_with_amazon_sqs_fair_queues_625fdc4f/",
+      "original_url": "https://aws.amazon.com/blogs/compute/building-resilient-multi-tenant-systems-with-amazon-sqs-fair-queues/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 3,
+      "unavailable_services": 0
+    },
+    {
       "title": "使用EKS Dashboard集中查看跨AWS区域和账户的Kubernetes集群",
       "publish_date": "2025-05-21",
       "url": "reports/centralize_visibility_of_kubernetes_clusters_across_aws_regions_and_accounts_with_eks_dashboard_6b75b670/",
@@ -358,6 +963,39 @@
       "feasibility": "LOW",
       "available_services": 0,
       "unavailable_services": 1
+    },
+    {
+      "title": "使用SageMaker Lakehouse Iceberg REST端点将Snowflake连接到S3 Tables",
+      "publish_date": "2025-03-14",
+      "url": "reports/connect_snowflake_to_s3_tables_using_the_sagemaker_lakehouse_iceberg_rest_endpoint_bceea2e6/",
+      "original_url": "https://aws.amazon.com/blogs/storage/connect-snowflake-to-s3-tables-using-the-sagemaker-lakehouse-iceberg-rest-endpoint/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 5,
+      "unavailable_services": 2
+    },
+    {
+      "title": "通过Amazon CloudFront配置CORS",
+      "publish_date": "2025-05-16",
+      "url": "reports/cors_configuration_through_amazon_cloudfront_c260ec49/",
+      "original_url": "https://aws.amazon.com/blogs/networking-and-content-delivery/cors-configuration-through-amazon-cloudfront/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 4,
+      "unavailable_services": 0
+    },
+    {
+      "title": "使用Amazon Bedrock创建异步AI代理",
+      "publish_date": "2025-03-13",
+      "url": "reports/creating_asynchronous_ai_agents_with_amazon_bedrock_c082859b/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/creating-asynchronous-ai-agents-with-amazon-bedrock/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 7,
+      "unavailable_services": 2
     },
     {
       "title": "自定义 IAM Access Analyzer 未使用访问分析的范围",
@@ -415,6 +1053,17 @@
       "unavailable_services": 1
     },
     {
+      "title": "使用Docker容器在本地开发和测试AWS Glue 5.0作业",
+      "publish_date": "2025-03-12",
+      "url": "reports/develop_and_test_aws_glue_5_0_jobs_locally_using_a_docker_container_8dac1ed0/",
+      "original_url": "https://aws.amazon.com/blogs/big-data/develop-and-test-aws-glue-5-0-jobs-locally-using-a-docker-container/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 9,
+      "unavailable_services": 0
+    },
+    {
       "title": "在Amazon Bedrock上有效使用提示词缓存",
       "publish_date": "2025-04-07",
       "url": "reports/effectively_use_prompt_caching_on_amazon_bedrock_cb431306/",
@@ -426,6 +1075,17 @@
       "unavailable_services": 1
     },
     {
+      "title": "在多账户环境中启用Amazon Bedrock跨区域推理",
+      "publish_date": "2025-03-27",
+      "url": "reports/enable_amazon_bedrock_cross_region_inference_in_multi_account_environments_599d2037/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/enable-amazon-bedrock-cross-region-inference-in-multi-account-environments/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 3,
+      "unavailable_services": 2
+    },
+    {
       "title": "使客户能够大规模交付生产就绪的AI代理",
       "publish_date": "2025-07-16",
       "url": "reports/enabling_customers_to_deliver_production_ready_ai_agents_at_scale_0be8054e/",
@@ -435,6 +1095,28 @@
       "feasibility": "LOW",
       "available_services": 7,
       "unavailable_services": 11
+    },
+    {
+      "title": "使用Amazon ECS、Amazon EKS和AWS Serverless MCP服务器增强AI辅助开发",
+      "publish_date": "2025-05-29",
+      "url": "reports/enhance_ai_assisted_development_with_amazon_ecs_amazon_eks_and_aws_serverless_mcp_server_7bae8caa/",
+      "original_url": "https://aws.amazon.com/blogs/aws/enhance-ai-assisted-development-with-amazon-ecs-amazon-eks-and-aws-serverless-mcp-server/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 7,
+      "unavailable_services": 2
+    },
+    {
+      "title": "使用LLM实现企业级自然语言到SQL生成：平衡准确性、延迟和规模",
+      "publish_date": "2025-04-24",
+      "url": "reports/enterprise_grade_natural_language_to_sql_generation_using_llms_balancing_accuracy_latency_and_scale_5712f0af/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/enterprise-grade-natural-language-to-sql-generation-using-llms-balancing-accuracy-latency-and-scale/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 4,
+      "unavailable_services": 1
     },
     {
       "title": "立即注册：云运维认证考试更新及新名称",
@@ -459,6 +1141,39 @@
       "unavailable_services": 1
     },
     {
+      "title": "关于CLOUD Act实际运作方式的五个事实",
+      "publish_date": "2025-07-22",
+      "url": "reports/five_facts_about_how_the_cloud_act_actually_works_9845000b/",
+      "original_url": "https://aws.amazon.com/blogs/security/five-facts-about-how-the-cloud-act-actually-works/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 3,
+      "unavailable_services": 0
+    },
+    {
+      "title": "从自动化到自主：在AI代理时代的领导力",
+      "publish_date": "2025-07-22",
+      "url": "reports/from_automation_to_agency_leading_in_the_era_of_agentic_ai_b2d14043/",
+      "original_url": "https://aws.amazon.com/blogs/enterprise-strategy/from-automation-to-agency-leading-in-the-era-of-agentic-ai/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 0,
+      "unavailable_services": 0
+    },
+    {
+      "title": "从创新到影响：AWS与NVIDIA如何助力真实世界的生成式AI成功",
+      "publish_date": "2025-03-19",
+      "url": "reports/from_innovation_to_impact_how_aws_and_nvidia_enable_real_world_generative_ai_success_9a1e4236/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/from-innovation-to-impact-how-aws-and-nvidia-enable-real-world-generative-ai-success/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "MODERATE",
+      "available_services": 8,
+      "unavailable_services": 1
+    },
+    {
       "title": "处理数十亿次调用 - AWS Lambda 最佳实践",
       "publish_date": "2025-03-17",
       "url": "reports/handling_billions_of_invocations_best_practices_from_aws_lambda_24891fe9/",
@@ -479,6 +1194,39 @@
       "feasibility": "LOW",
       "available_services": 11,
       "unavailable_services": 3
+    },
+    {
+      "title": "Formula 1如何使用生成式AI加速比赛日问题解决",
+      "publish_date": "2025-02-18",
+      "url": "reports/how_formula_1_uses_generative_ai_to_accelerate_race_day_issue_resolution_9d9741aa/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/how-formula-1-uses-generative-ai-to-accelerate-race-day-issue-resolution/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 10,
+      "unavailable_services": 3
+    },
+    {
+      "title": "如何使用AWS License Manager配置基于用户订阅许可证的Microsoft远程桌面服务",
+      "publish_date": "2025-01-27",
+      "url": "reports/how_to_configure_microsoft_remote_desktop_services_using_user_based_subscription_licenses_with_aws_license_manager_bae85ef8/",
+      "original_url": "https://aws.amazon.com/blogs/modernizing-with-aws/how-to-configure-microsoft-remote-desktop-services-using-user-based-subscription-licenses-with-aws-license-manager/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 4,
+      "unavailable_services": 1
+    },
+    {
+      "title": "如何监控、优化和保护Amazon Cognito机器对机器授权",
+      "publish_date": "2025-01-13",
+      "url": "reports/how_to_monitor_optimize_and_secure_amazon_cognito_machine_to_machine_authorization_b82e14db/",
+      "original_url": "https://aws.amazon.com/blogs/security/how-to-monitor-optimize-and-secure-amazon-cognito-machine-to-machine-authorization/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 8,
+      "unavailable_services": 1
     },
     {
       "title": "如何使用Referer检查、AWS WAF和Amazon CloudFront防止盗链",
@@ -514,6 +1262,17 @@
       "unavailable_services": 0
     },
     {
+      "title": "使用Microsoft Entra和AWS IAM Identity Center实现AWS即时特权访问",
+      "publish_date": "2025-06-03",
+      "url": "reports/implementing_just_in_time_privileged_access_to_aws_with_microsoft_entra_and_aws_iam_identity_center_b1917617/",
+      "original_url": "https://aws.amazon.com/blogs/security/implementing-just-in-time-privileged-access-to-aws-with-microsoft-entra-and-aws-iam-identity-center/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 4,
+      "unavailable_services": 0
+    },
+    {
       "title": "加密的重要性以及AWS如何提供帮助",
       "publish_date": "2025-02-12",
       "url": "reports/importance_of_encryption_and_how_aws_can_help_5e380c8a/",
@@ -525,6 +1284,39 @@
       "unavailable_services": 2
     },
     {
+      "title": "将AWS与.NET Aspire集成",
+      "publish_date": "2025-02-11",
+      "url": "reports/integrating_aws_with_net_aspire_839b3568/",
+      "original_url": "https://aws.amazon.com/blogs/developer/integrating-aws-with-net-aspire/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 6,
+      "unavailable_services": 0
+    },
+    {
+      "title": "介绍Amazon Application Recovery Controller区域切换：多区域应用程序恢复服务",
+      "publish_date": "2025-08-01",
+      "url": "reports/introducing_amazon_application_recovery_controller_region_switch_a_multi_region_application_recovery_service_4b8835d4/",
+      "original_url": "https://aws.amazon.com/blogs/aws/introducing-amazon-application-recovery-controller-region-switch-a-multi-region-application-recovery-service/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 11,
+      "unavailable_services": 1
+    },
+    {
+      "title": "介绍 Amazon Bedrock AgentCore 浏览器工具",
+      "publish_date": "2025-08-01",
+      "url": "reports/introducing_amazon_bedrock_agentcore_browser_tool_9fd1b1ce/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/introducing-amazon-bedrock-agentcore-browser-tool/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 5,
+      "unavailable_services": 2
+    },
+    {
       "title": "介绍Amazon Bedrock AgentCore Gateway：变革企业AI代理工具开发",
       "publish_date": "2025-08-15",
       "url": "reports/introducing_amazon_bedrock_agentcore_gateway_transforming_enterprise_ai_agent_tool_development_31355466/",
@@ -533,6 +1325,17 @@
       "target_region": "cn-northwest-1",
       "feasibility": "LOW",
       "available_services": 5,
+      "unavailable_services": 1
+    },
+    {
+      "title": "介绍Amazon Bedrock AgentCore Identity：大规模保护代理AI安全",
+      "publish_date": "2025-08-15",
+      "url": "reports/introducing_amazon_bedrock_agentcore_identity_securing_agentic_ai_at_scale_8cdccd32/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/introducing-amazon-bedrock-agentcore-identity-securing-agentic-ai-at-scale/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 6,
       "unavailable_services": 1
     },
     {
@@ -580,6 +1383,17 @@
       "unavailable_services": 0
     },
     {
+      "title": "AWS API模型和公开可用的AWS API定义资源介绍",
+      "publish_date": "2025-06-05",
+      "url": "reports/introducing_aws_api_models_and_publicly_available_resources_for_aws_api_definitions_73bbbe37/",
+      "original_url": "https://aws.amazon.com/blogs/aws/introducing-aws-api-models-and-publicly-available-resources-for-aws-api-definitions/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 2,
+      "unavailable_services": 0
+    },
+    {
       "title": "介绍AWS Cloud Control API MCP Server：AWS上的自然语言基础设施管理",
       "publish_date": "2025-08-13",
       "url": "reports/introducing_aws_cloud_control_api_mcp_server_natural_language_infrastructure_management_on_aws_fb06c714/",
@@ -589,6 +1403,17 @@
       "feasibility": "MODERATE",
       "available_services": 11,
       "unavailable_services": 1
+    },
+    {
+      "title": "AWS CloudFormation堆栈重构功能介绍",
+      "publish_date": "2025-02-06",
+      "url": "reports/introducing_aws_cloudformation_stack_refactoring_0e05c5ab/",
+      "original_url": "https://aws.amazon.com/blogs/devops/introducing-aws-cloudformation-stack-refactoring/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 4,
+      "unavailable_services": 0
     },
     {
       "title": "AWS IoT Core设备定位与Amazon Sidewalk集成介绍",
@@ -613,6 +1438,17 @@
       "unavailable_services": 2
     },
     {
+      "title": "介绍用于实时广告技术工作负载的AWS RTB Fabric",
+      "publish_date": "2025-10-23",
+      "url": "reports/introducing_aws_rtb_fabric_for_real_time_advertising_technology_workloads_f771e296/",
+      "original_url": "https://aws.amazon.com/blogs/aws/introducing-aws-rtb-fabric-for-real-time-advertising-technology-workloads/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 6,
+      "unavailable_services": 1
+    },
+    {
       "title": "AWS Serverless MCP Server：现代应用的AI驱动开发",
       "publish_date": "2025-05-29",
       "url": "reports/introducing_aws_serverless_mcp_server_ai_powered_development_for_modern_applications_0c2342f3/",
@@ -624,6 +1460,17 @@
       "unavailable_services": 1
     },
     {
+      "title": "介绍AWS SimuLearn：生成式AI从业者课程",
+      "publish_date": "2025-05-20",
+      "url": "reports/introducing_aws_simulearn_generative_ai_practitioner_ee5d389c/",
+      "original_url": "https://aws.amazon.com/blogs/training-and-certification/introducing-aws-simulearn-generative-ai-practitioner/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 1,
+      "unavailable_services": 4
+    },
+    {
       "title": "在Amazon Bedrock中引入Claude Sonnet 4.5：Anthropic最智能的模型，最适合编码和复杂代理",
       "publish_date": "2025-09-29",
       "url": "reports/introducing_claude_sonnet_4_5_in_amazon_bedrock_anthropics_most_intelligent_model_best_for_coding_and_complex_agents_817067d6/",
@@ -632,6 +1479,61 @@
       "target_region": "cn-northwest-1",
       "feasibility": "LOW",
       "available_services": 0,
+      "unavailable_services": 1
+    },
+    {
+      "title": "介绍Amazon EventBridge事件总线的跨账号目标功能",
+      "publish_date": "2025-01-21",
+      "url": "reports/introducing_cross_account_targets_for_amazon_eventbridge_event_buses_461122a5/",
+      "original_url": "https://aws.amazon.com/blogs/compute/introducing-cross-account-targets-for-amazon-eventbridge-event-buses/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 7,
+      "unavailable_services": 0
+    },
+    {
+      "title": "推出无超额费用的固定费率定价计划",
+      "publish_date": "2025-11-18",
+      "url": "reports/introducing_flat_rate_pricing_plans_with_no_overages_7845e5b8/",
+      "original_url": "https://aws.amazon.com/blogs/networking-and-content-delivery/introducing-flat-rate-pricing-plans-with-no-overages/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 7,
+      "unavailable_services": 0
+    },
+    {
+      "title": "使用AWS Systems Manager实现即时节点访问",
+      "publish_date": "2025-04-29",
+      "url": "reports/introducing_just_in_time_node_access_using_aws_systems_manager_8ae53047/",
+      "original_url": "https://aws.amazon.com/blogs/mt/introducing-just-in-time-node-access-using-aws-systems-manager/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 6,
+      "unavailable_services": 2
+    },
+    {
+      "title": "介绍用于Apache Spark History Server的MCP服务器，实现AI驱动的调试和优化",
+      "publish_date": "2025-07-23",
+      "url": "reports/introducing_mcp_server_for_apache_spark_history_server_for_ai_powered_debugging_and_optimization_e42962f2/",
+      "original_url": "https://aws.amazon.com/blogs/big-data/introducing-mcp-server-for-apache-spark-history-server-for-ai-powered-debugging-and-optimization/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 7,
+      "unavailable_services": 1
+    },
+    {
+      "title": "介绍Oracle Database@AWS：简化Oracle Exadata迁移到AWS云",
+      "publish_date": "2025-07-08",
+      "url": "reports/introducing_oracle_databaseaws_for_simplified_oracle_exadata_migrations_to_the_aws_cloud_b020441c/",
+      "original_url": "https://aws.amazon.com/blogs/aws/introducing-oracle-databaseaws-for-simplified-oracle-exadata-migrations-to-the-aws-cloud/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 14,
       "unavailable_services": 1
     },
     {
@@ -668,6 +1570,28 @@
       "unavailable_services": 2
     },
     {
+      "title": "介绍AWS信任中心",
+      "publish_date": "2025-02-14",
+      "url": "reports/introducing_the_aws_trust_center_cca8acaa/",
+      "original_url": "https://aws.amazon.com/blogs/security/introducing-the-aws-trust-center/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 2,
+      "unavailable_services": 0
+    },
+    {
+      "title": "为AWS WAF和AWS Shield Advanced客户推出新的应用层（L7）DDoS防护",
+      "publish_date": "2025-06-12",
+      "url": "reports/introducing_the_aws_waf_application_layer_ddos_protection_b23edb46/",
+      "original_url": "https://aws.amazon.com/blogs/networking-and-content-delivery/introducing-the-aws-waf-application-layer-ddos-protection/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 4,
+      "unavailable_services": 2
+    },
+    {
       "title": "Amazon Q Developer CLI 中的全新智能编码体验",
       "publish_date": "2025-03-06",
       "url": "reports/introducing_the_enhanced_command_line_interface_in_amazon_q_developer_f2b39a7f/",
@@ -677,6 +1601,17 @@
       "feasibility": "LOW",
       "available_services": 3,
       "unavailable_services": 2
+    },
+    {
+      "title": "GraphRAG工具包介绍",
+      "publish_date": "2025-01-27",
+      "url": "reports/introducing_the_graphrag_toolkit_9da46b74/",
+      "original_url": "https://aws.amazon.com/blogs/database/introducing-the-graphrag-toolkit/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "MODERATE",
+      "available_services": 7,
+      "unavailable_services": 1
     },
     {
       "title": "介绍下一代Amazon Connect：AI驱动的交互增强客户关系并改善业务成果",
@@ -690,6 +1625,17 @@
       "unavailable_services": 4
     },
     {
+      "title": "在AWS Application Load Balancer中引入URL和Host Header重写功能",
+      "publish_date": "2025-10-15",
+      "url": "reports/introducing_url_and_host_header_rewrite_with_aws_application_load_balancers_25e0a228/",
+      "original_url": "https://aws.amazon.com/blogs/networking-and-content-delivery/introducing-url-and-host-header-rewrite-with-aws-application-load-balancers/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 6,
+      "unavailable_services": 0
+    },
+    {
       "title": "介绍VPC加密控制：在区域内和跨VPC强制执行传输中加密",
       "publish_date": "2025-11-21",
       "url": "reports/introducing_vpc_encryption_controls_enforce_encryption_in_transit_within_and_across_vpcs_in_a_region_d156a745/",
@@ -698,6 +1644,61 @@
       "target_region": "cn-northwest-1",
       "feasibility": "LOW",
       "available_services": 22,
+      "unavailable_services": 0
+    },
+    {
+      "title": "数据驱动的智能体AI应用的关键组件",
+      "publish_date": "2025-10-03",
+      "url": "reports/key_components_of_a_data_driven_agentic_ai_application_53361f6b/",
+      "original_url": "https://aws.amazon.com/blogs/database/key-components-of-a-data-driven-agentic-ai-application/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 9,
+      "unavailable_services": 4
+    },
+    {
+      "title": "Meta的Llama 4模型现已在Amazon Bedrock无服务器模式中提供",
+      "publish_date": "2025-04-28",
+      "url": "reports/llama_4_models_from_meta_now_available_in_amazon_bedrock_serverless_3d48e0d9/",
+      "original_url": "https://aws.amazon.com/blogs/aws/llama-4-models-from-meta-now-available-in-amazon-bedrock-serverless/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 1,
+      "unavailable_services": 1
+    },
+    {
+      "title": "在Amazon Bedrock模型评估中使用LLM作为评判者",
+      "publish_date": "2025-02-12",
+      "url": "reports/llm_as_a_judge_on_amazon_bedrock_model_evaluation_6129e7dc/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/llm-as-a-judge-on-amazon-bedrock-model-evaluation/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 2,
+      "unavailable_services": 1
+    },
+    {
+      "title": "Luma AI的Ray2视频模型现已在Amazon Bedrock中可用",
+      "publish_date": "2025-01-23",
+      "url": "reports/luma_ai_ray_2_video_model_is_now_available_in_amazon_bedrock_630d3331/",
+      "original_url": "https://aws.amazon.com/blogs/aws/luma-ai-ray-2-video-model-is-now-available-in-amazon-bedrock/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 2,
+      "unavailable_services": 1
+    },
+    {
+      "title": "在AWS Glue数据目录上管理Apache Iceberg的并发写入冲突",
+      "publish_date": "2025-04-08",
+      "url": "reports/manage_concurrent_write_conflicts_in_apache_iceberg_on_the_aws_glue_data_catalog_cde2978e/",
+      "original_url": "https://aws.amazon.com/blogs/big-data/manage-concurrent-write-conflicts-in-apache-iceberg-on-the-aws-glue-data-catalog/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 3,
       "unavailable_services": 0
     },
     {
@@ -712,6 +1713,17 @@
       "unavailable_services": 1
     },
     {
+      "title": "掌握Amazon Q Developer规则功能",
+      "publish_date": "2025-08-28",
+      "url": "reports/mastering_amazon_q_developer_with_rules_56e11b3c/",
+      "original_url": "https://aws.amazon.com/blogs/devops/mastering-amazon-q-developer-with-rules/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 0,
+      "unavailable_services": 1
+    },
+    {
       "title": "使用自动推理检查最小化AI幻觉并实现高达99%的验证准确率:现已正式发布",
       "publish_date": "2025-08-06",
       "url": "reports/minimize_ai_hallucinations_and_deliver_up_to_99_verification_accuracy_with_automated_reasoning_checks_now_available_5e5449e9/",
@@ -721,6 +1733,17 @@
       "feasibility": "LOW",
       "available_services": 0,
       "unavailable_services": 3
+    },
+    {
+      "title": "使用Amazon EC2 Capacity Manager从单一界面监控、分析和管理容量使用情况",
+      "publish_date": "2025-10-16",
+      "url": "reports/monitor_analyze_and_manage_capacity_usage_from_a_single_interface_with_amazon_ec2_capacity_manager_e32c0c42/",
+      "original_url": "https://aws.amazon.com/blogs/aws/monitor-analyze-and-manage-capacity-usage-from-a-single-interface-with-amazon-ec2-capacity-manager/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 6,
+      "unavailable_services": 1
     },
     {
       "title": "使用容器网络可观测性监控EKS集群的网络性能和流量",
@@ -743,6 +1766,17 @@
       "feasibility": "LOW",
       "available_services": 3,
       "unavailable_services": 1
+    },
+    {
+      "title": "全新 Amazon EC2 P6-B200 实例：由 NVIDIA Blackwell GPU 驱动，加速 AI 创新",
+      "publish_date": "2025-05-15",
+      "url": "reports/new_amazon_ec2_p6_b200_instances_powered_by_nvidia_blackwell_gpus_to_accelerate_ai_innovations_b03d1d84/",
+      "original_url": "https://aws.amazon.com/blogs/aws/new-amazon-ec2-p6-b200-instances-powered-by-nvidia-blackwell-gpus-to-accelerate-ai-innovations/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 15,
+      "unavailable_services": 0
     },
     {
       "title": "AWS Billing Transfer：跨多个组织集中管理AWS账单和成本",
@@ -778,6 +1812,39 @@
       "unavailable_services": 2
     },
     {
+      "title": "AWS区域和可用区详细地理信息现已可用",
+      "publish_date": "2025-03-25",
+      "url": "reports/now_available_geography_information_for_all_aws_regions_and_availability_zones_79d89838/",
+      "original_url": "https://aws.amazon.com/blogs/aws/now-available-geography-information-for-all-aws-regions-and-availability-zones/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 0,
+      "unavailable_services": 0
+    },
+    {
+      "title": "AWS亚太（新西兰）区域正式开放",
+      "publish_date": "2025-09-01",
+      "url": "reports/now_open_aws_asia_pacific_new_zealand_region_b03802b1/",
+      "original_url": "https://aws.amazon.com/blogs/aws/now-open-aws-asia-pacific-new-zealand-region/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "MODERATE",
+      "available_services": 7,
+      "unavailable_services": 2
+    },
+    {
+      "title": "现已开放 – AWS 亚太（台北）区域",
+      "publish_date": "2025-06-05",
+      "url": "reports/now_open_aws_asia_pacific_taipei_region_986bc32f/",
+      "original_url": "https://aws.amazon.com/blogs/aws/now-open-aws-asia-pacific-taipei-region/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "MODERATE",
+      "available_services": 6,
+      "unavailable_services": 2
+    },
+    {
       "title": "现已开放 — AWS 墨西哥（中部）区域",
       "publish_date": "2025-01-14",
       "url": "reports/now_open_aws_mexico_central_region_18559402/",
@@ -800,6 +1867,28 @@
       "unavailable_services": 2
     },
     {
+      "title": "开放协议促进代理互操作性第2部分：MCP上的身份验证",
+      "publish_date": "2025-06-26",
+      "url": "reports/open_protocols_for_agent_interoperability_part_2_authentication_on_mcp_1339338d/",
+      "original_url": "https://aws.amazon.com/blogs/opensource/open-protocols-for-agent-interoperability-part-2-authentication-on-mcp/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 0,
+      "unavailable_services": 0
+    },
+    {
+      "title": "开放协议实现Agent互操作性第3部分：Strands Agents与MCP",
+      "publish_date": "2025-07-10",
+      "url": "reports/open_protocols_for_agent_interoperability_part_3_strands_agents_mcp_f9b34b52/",
+      "original_url": "https://aws.amazon.com/blogs/opensource/open-protocols-for-agent-interoperability-part-3-strands-agents-mcp/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 5,
+      "unavailable_services": 1
+    },
+    {
       "title": "OpenAI开放权重模型现已在AWS上可用",
       "publish_date": "2025-08-05",
       "url": "reports/openai_open_weight_models_now_available_on_aws_3269c0f1/",
@@ -809,6 +1898,28 @@
       "feasibility": "LOW",
       "available_services": 1,
       "unavailable_services": 1
+    },
+    {
+      "title": "优化AI响应速度：Amazon Bedrock延迟优化推理实用指南",
+      "publish_date": "2025-01-28",
+      "url": "reports/optimizing_ai_responsiveness_a_practical_guide_to_amazon_bedrock_latency_optimized_inference_ade78500/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/optimizing-ai-responsiveness-a-practical-guide-to-amazon-bedrock-latency-optimized-inference/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 3,
+      "unavailable_services": 1
+    },
+    {
+      "title": "使用Amazon EC2和SageMaker AI优化构建AI模型的成本",
+      "publish_date": "2025-03-28",
+      "url": "reports/optimizing_cost_for_developing_custom_ai_models_with_amazon_ec2_and_sagemaker_ai_d9fa8f93/",
+      "original_url": "https://aws.amazon.com/blogs/aws-cloud-financial-management/optimizing-cost-for-developing-custom-ai-models-with-amazon-ec2-and-sagemaker-ai/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 24,
+      "unavailable_services": 0
     },
     {
       "title": "使用Amazon Bedrock优化基础模型成本",
@@ -842,6 +1953,17 @@
       "feasibility": "LOW",
       "available_services": 13,
       "unavailable_services": 5
+    },
+    {
+      "title": "使用Amazon CloudFront SaaS Manager降低运营开销",
+      "publish_date": "2025-04-28",
+      "url": "reports/reduce_your_operational_overhead_today_with_amazon_cloudfront_saas_manager_605107cf/",
+      "original_url": "https://aws.amazon.com/blogs/aws/reduce-your-operational-overhead-today-with-amazon-cloudfront-saas-manager/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 3,
+      "unavailable_services": 1
     },
     {
       "title": "宣布推出Amazon Quick Suite：您的AI代理队友，用于回答问题并采取行动",
@@ -899,6 +2021,39 @@
       "unavailable_services": 0
     },
     {
+      "title": "在 Amazon Bedrock AgentCore Runtime 上安全启动和扩展您的代理和工具",
+      "publish_date": "2025-08-13",
+      "url": "reports/securely_launch_and_scale_your_agents_and_tools_on_amazon_bedrock_agentcore_runtime_5abfcb35/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/securely-launch-and-scale-your-agents-and-tools-on-amazon-bedrock-agentcore-runtime/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 4,
+      "unavailable_services": 1
+    },
+    {
+      "title": "Shorthills AI 联合 AWS 和 DataStax 转型企业数据搜索",
+      "publish_date": "2025-05-13",
+      "url": "reports/shorthills_ai_teams_with_aws_and_datastax_to_transform_enterprise_data_search_d0e24660/",
+      "original_url": "https://aws.amazon.com/blogs/apn/shorthills-ai-teams-with-aws-and-datastax-to-transform-enterprise-data-search/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 8,
+      "unavailable_services": 2
+    },
+    {
+      "title": "Amazon Bedrock 中的简化模型访问",
+      "publish_date": "2025-10-15",
+      "url": "reports/simplified_amazon_bedrock_model_access_0830b370/",
+      "original_url": "https://aws.amazon.com/blogs/security/simplified-amazon-bedrock-model-access/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 4,
+      "unavailable_services": 1
+    },
+    {
       "title": "使用AWS IAM出站身份联合简化对外部服务的访问",
       "publish_date": "2025-11-19",
       "url": "reports/simplify_access_to_external_services_using_aws_iam_outbound_identity_federation_63040217/",
@@ -907,6 +2062,39 @@
       "target_region": "cn-northwest-1",
       "feasibility": "HIGH",
       "available_services": 6,
+      "unavailable_services": 0
+    },
+    {
+      "title": "使用控制台到IDE集成和远程调试简化AWS Lambda无服务器开发",
+      "publish_date": "2025-07-17",
+      "url": "reports/simplify_serverless_development_with_console_to_ide_and_remote_debugging_for_aws_lambda_2384d2c5/",
+      "original_url": "https://aws.amazon.com/blogs/aws/simplify-serverless-development-with-console-to-ide-and-remote-debugging-for-aws-lambda/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "MODERATE",
+      "available_services": 6,
+      "unavailable_services": 0
+    },
+    {
+      "title": "Strands Agents SDK：代理架构和可观测性的技术深度解析",
+      "publish_date": "2025-07-31",
+      "url": "reports/strands_agents_sdk_a_technical_deep_dive_into_agent_architectures_and_observability_620cadc2/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/strands-agents-sdk-a-technical-deep-dive-into-agent-architectures-and-observability/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 14,
+      "unavailable_services": 5
+    },
+    {
+      "title": "使用Micronbrane Medical和Basepair在AWS上简化mNGS分析",
+      "publish_date": "2025-04-09",
+      "url": "reports/streamline_mngs_analysis_with_micronbrane_medical_and_basepair_on_aws_98da5507/",
+      "original_url": "https://aws.amazon.com/blogs/apn/streamline-mngs-analysis-with-micronbrane-medical-and-basepair-on-aws/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 7,
       "unavailable_services": 0
     },
     {
@@ -921,6 +2109,94 @@
       "unavailable_services": 0
     },
     {
+      "title": "使用Claude Code和Amazon Bedrock提示缓存加速开发",
+      "publish_date": "2025-06-04",
+      "url": "reports/supercharge_your_development_with_claude_code_and_amazon_bedrock_prompt_caching_b83b0a90/",
+      "original_url": "https://aws.amazon.com/blogs/machine-learning/supercharge-your-development-with-claude-code-and-amazon-bedrock-prompt-caching/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 3,
+      "unavailable_services": 1
+    },
+    {
+      "title": "使用AWS MCP服务器加速AWS数据库开发",
+      "publish_date": "2025-06-27",
+      "url": "reports/supercharging_aws_database_development_with_aws_mcp_servers_abdf194b/",
+      "original_url": "https://aws.amazon.com/blogs/database/supercharging-aws-database-development-with-aws-mcp-servers/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 7,
+      "unavailable_services": 2
+    },
+    {
+      "title": "AI技能差距：女性对生成式AI的兴趣超过可用培训",
+      "publish_date": "2025-03-06",
+      "url": "reports/the_ai_skills_gap_womens_interest_in_generative_ai_outpaces_available_training_9b788700/",
+      "original_url": "https://aws.amazon.com/blogs/training-and-certification/the-ai-skills-gap-womens-interest-in-generative-ai-outpaces-available-training/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 5,
+      "unavailable_services": 1
+    },
+    {
+      "title": "AI技能差距：女性对生成式AI的兴趣超过可用培训",
+      "publish_date": "2025-03-06",
+      "url": "reports/the_ai_skills_gap_womens_interest_in_generative_ai_outpaces_available_training_cde64c8e/",
+      "original_url": "https://aws.amazon.com/blogs/training-and-certification/the-ai-skills-gap-womens-interest-in-generative-ai-outpaces-available-training/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 6,
+      "unavailable_services": 0
+    },
+    {
+      "title": "自主代理的崛起：企业领导者需要了解的AI下一波浪潮",
+      "publish_date": "2025-06-13",
+      "url": "reports/the_rise_of_autonomous_agents_what_enterprise_leaders_need_to_know_about_the_next_wave_of_ai_a3309a49/",
+      "original_url": "https://aws.amazon.com/blogs/aws-insights/the-rise-of-autonomous-agents-what-enterprise-leaders-need-to-know-about-the-next-wave-of-ai/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 0,
+      "unavailable_services": 2
+    },
+    {
+      "title": "AWS Summit New York 2025 重要公告汇总",
+      "publish_date": "2025-07-16",
+      "url": "reports/top_announcements_of_the_aws_summit_in_new_york_2025_6ed3c9ca/",
+      "original_url": "https://aws.amazon.com/blogs/aws/top-announcements-of-the-aws-summit-in-new-york-2025/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 10,
+      "unavailable_services": 1
+    },
+    {
+      "title": "2024年最受欢迎的架构博客文章",
+      "publish_date": "2025-01-23",
+      "url": "reports/top_architecture_blog_posts_of_2024_01774a87/",
+      "original_url": "https://aws.amazon.com/blogs/architecture/top-architecture-blog-posts-of-2024/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "MODERATE",
+      "available_services": 13,
+      "unavailable_services": 3
+    },
+    {
+      "title": "使用生成式AI转型软件开发生命周期（SDLC）",
+      "publish_date": "2025-01-16",
+      "url": "reports/transforming_the_software_development_lifecycle_sdlc_with_generative_ai_18820066/",
+      "original_url": "https://aws.amazon.com/blogs/apn/transforming-the-software-development-lifecycle-sdlc-with-generative-ai/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 11,
+      "unavailable_services": 1
+    },
+    {
       "title": "深入解析：Amazon EKS 超大规模集群",
       "publish_date": "2025-07-16",
       "url": "reports/under_the_hood_amazon_eks_ultra_scale_clusters_720a8bb0/",
@@ -930,6 +2206,28 @@
       "feasibility": "HIGH",
       "available_services": 10,
       "unavailable_services": 0
+    },
+    {
+      "title": "使用全新AWS Security Hub统一安全管理，实现大规模风险优先级排序和响应（预览版）",
+      "publish_date": "2025-06-17",
+      "url": "reports/unify_your_security_with_the_new_aws_security_hub_for_risk_prioritization_and_response_at_scale_preview_4888997b/",
+      "original_url": "https://aws.amazon.com/blogs/aws/unify-your-security-with-the-new-aws-security-hub-for-risk-prioritization-and-response-at-scale-preview/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "MODERATE",
+      "available_services": 3,
+      "unavailable_services": 1
+    },
+    {
+      "title": "解锁新可能：AWS Organizations服务控制策略现已支持完整IAM语言",
+      "publish_date": "2025-09-19",
+      "url": "reports/unlock_new_possibilities_aws_organizations_service_control_policy_now_supports_full_iam_language_e9a61c1e/",
+      "original_url": "https://aws.amazon.com/blogs/security/unlock-new-possibilities-aws-organizations-service-control-policy-now-supports-full-iam-language/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 10,
+      "unavailable_services": 1
     },
     {
       "title": "在AWS上释放模型上下文协议(MCP)的强大能力",
@@ -943,6 +2241,17 @@
       "unavailable_services": 3
     },
     {
+      "title": "Amazon S3 Express One Zone 降价高达 85%",
+      "publish_date": "2025-04-10",
+      "url": "reports/up_to_85_price_reductions_for_amazon_s3_express_one_zone_9c1bb970/",
+      "original_url": "https://aws.amazon.com/blogs/aws/up-to-85-price-reductions-for-amazon-s3-express-one-zone/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 5,
+      "unavailable_services": 0
+    },
+    {
       "title": "Amazon Chime 服务支持更新公告",
       "publish_date": "2025-02-19",
       "url": "reports/update_on_support_for_amazon_chime_e07b8337/",
@@ -951,6 +2260,28 @@
       "target_region": "cn-northwest-1",
       "feasibility": "LOW",
       "available_services": 3,
+      "unavailable_services": 1
+    },
+    {
+      "title": "在AWS上使用生成式AI进行高效临床文档分析",
+      "publish_date": "2025-02-05",
+      "url": "reports/use_generative_ai_on_aws_for_efficient_clinical_document_analysis_5a1f6459/",
+      "original_url": "https://aws.amazon.com/blogs/architecture/use-generative-ai-on-aws-for-efficient-clinical-document-analysis/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 10,
+      "unavailable_services": 2
+    },
+    {
+      "title": "使用模型上下文协议（MCP）与Amazon Q Developer实现上下文感知的IDE工作流",
+      "publish_date": "2025-06-12",
+      "url": "reports/use_model_context_protocol_with_amazon_q_developer_for_context_aware_ide_workflows_c911c3a0/",
+      "original_url": "https://aws.amazon.com/blogs/devops/use-model-context-protocol-with-amazon-q-developer-for-context-aware-ide-workflows/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 0,
       "unavailable_services": 1
     },
     {
@@ -965,10 +2296,43 @@
       "unavailable_services": 2
     },
     {
+      "title": "使用生成式AI为软件需求创建测试用例",
+      "publish_date": "2025-01-13",
+      "url": "reports/using_generative_ai_to_create_test_cases_for_software_requirements_d50df0cb/",
+      "original_url": "https://aws.amazon.com/blogs/industries/using-generative-ai-to-create-test-cases-for-software-requirements/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 3,
+      "unavailable_services": 1
+    },
+    {
+      "title": "使用负载均衡器容量单元预留为流量激增做准备",
+      "publish_date": "2025-01-28",
+      "url": "reports/using_load_balancer_capacity_unit_reservation_to_prepare_for_sharp_increases_in_traffic_90c21e6f/",
+      "original_url": "https://aws.amazon.com/blogs/networking-and-content-delivery/using-load-balancer-capacity-unit-reservation-to-prepare-for-sharp-increases-in-traffic/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 6,
+      "unavailable_services": 0
+    },
+    {
       "title": "使用Strands Agents与Claude 4交错思维功能",
       "publish_date": "2025-06-13",
       "url": "reports/using_strands_agents_with_claude_4_interleaved_thinking_6721a4b9/",
       "original_url": "https://aws.amazon.com/blogs/opensource/using-strands-agents-with-claude-4-interleaved-thinking/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "LOW",
+      "available_services": 0,
+      "unavailable_services": 1
+    },
+    {
+      "title": "为什么模型选择很重要：灵活的AI释放创新自由",
+      "publish_date": "2025-05-27",
+      "url": "reports/why_model_choice_matters_flexible_ai_unlocks_freedom_to_innovate_42a49343/",
+      "original_url": "https://aws.amazon.com/blogs/aws-insights/why-model-choice-matters-flexible-ai-unlocks-freedom-to-innovate/",
       "validation_date": "2025-11-25",
       "target_region": "cn-northwest-1",
       "feasibility": "LOW",
@@ -985,6 +2349,17 @@
       "feasibility": "LOW",
       "available_services": 1,
       "unavailable_services": 2
+    },
+    {
+      "title": "从零到英雄：通过AWS认证实现职业成长指南",
+      "publish_date": "2025-03-20",
+      "url": "reports/zero_to_hero_fa77512c/",
+      "original_url": "https://aws.amazon.com/blogs/training-and-certification/zero-to-hero/",
+      "validation_date": "2025-11-25",
+      "target_region": "cn-northwest-1",
+      "feasibility": "HIGH",
+      "available_services": 1,
+      "unavailable_services": 0
     }
   ]
 }

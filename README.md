@@ -1,170 +1,151 @@
-# AWS China Region Content Validation Tool
+# AWS 中国区内容兼容性验证工具
 
-本工具用于验证 AWS 海外区域的技术博客在中国区的兼容性，通过分析内容来判断其中涉及的服务、功能和架构能否在 AWS 中国区（cn-north-1、cn-northwest-1）中实现。
+自动化验证 AWS 技术博客在中国区的兼容性，通过 AI 智能分析服务可用性并生成详细报告。
 
-## 核心功能
+## ✨ 核心特性
 
-- **基础验证**：分析内容中涉及的 AWS 服务在中国区的可用性
-- **深度验证**：对可行的内容执行实际部署和运行验证
-- **智能可行性门控**：避免在不可行的内容上浪费资源
-- **内容类型检测**：自动识别项目类型和教程内容
-- **AI 驱动分析**：使用 Kiro CLI custom agent 进行智能验证
+- 🔍 **智能服务识别** - 自动识别所有 AWS 服务和功能
+- 🌏 **兼容性分析** - 评估中国区实施可行性
+- 📊 **四级评估** - HIGH/MODERATE/LOW/NOT_APPLICABLE
+- 📝 **详细报告** - 包含服务清单和实施建议
+- ⚙️ **批量处理** - 支持大规模自动化验证
+- 🤖 **AI 驱动** - 基于 Amazon Q Developer CLI
 
-## 安装
+## 快速开始
 
-### 前置要求
-
-- Python 3.12+ - `markitdown` 的运行环境
-- `markitdown` - URL 内容转换工具
-- `kiro-cli` - AI agent 运行环境
-- AWS CLI - AWS 操作工具
-- AWS 中国区访问凭证
-
-### 安装依赖
+### 安装
 
 ```bash
-# 安装 markitdown（推荐使用 pipx）
-pipx install markitdown
-# 或使用 pip
-pip install markitdown
+# 1. 克隆项目
+git clone <repository-url>
+cd china-regions-content-bot-1
 
-# 安装 kiro-cli (Kiro CLI)
-# 参考：https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-getting-started-installing.html
+# 2. 安装依赖
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 
-# 安装 AWS CLI
-# 参考：https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
-```
-
-> **注意**：`pipx` 是安装命令行工具的推荐方式，它会为每个工具创建独立的虚拟环境。如果尚未安装 `pipx`，可以通过 `pip install pipx` 或 `brew install pipx`（macOS）进行安装。
-
-### AWS 中国区凭证配置
-
-```bash
+# 3. 配置 AWS 中国区凭证
 aws configure --profile cn
 ```
 
-配置 AWS AK/SK 和 region（cn-north-1 或 cn-northwest-1）
+**前置要求**：
+- Python 3.12+
+- [Amazon Q Developer CLI](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-getting-started-installing.html)
+- [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
-## 使用方法
+## 基本使用
 
-### 基本用法
-
-```bash
-# 验证内容
-./validate.sh -u <content-url> -r <region> -p <profile>
-```
-
-### 参数
-
-- `-u, --url`：AWS博客 URL（必需）
-- `-r, --region`：AWS 中国区（默认：cn-northwest-1）
-- `-p, --profile`：AWS CLI 配置文件（默认：cn）
-- `--log-level`：日志级别（默认：INFO）
-- `-h, --help`：显示帮助信息
-
-### 示例
+### 验证单篇博客
 
 ```bash
-# 验证 AWS 博客文章
-./validate.sh -u "https://aws.amazon.com/blogs/big-data/introducing-managed-query-results-for-amazon-athena/"
-
-# 指定区域和配置文件
-./validate.sh -u "https://aws.amazon.com/blogs/..." -r cn-north-1 -p my-cn-profile
+python run.py validate -u "https://aws.amazon.com/blogs/..."
 ```
+
+### 批量验证
+
+```bash
+# 获取博客列表
+python run.py fetch-blogs -n 50 -o blogs.json
+
+# 批量验证（跳过已验证的）
+python run.py batch -i blogs.json --skip-existing --continue-on-error
+
+# 生成报告索引
+python run.py generate-reports
+```
+
+### 常用选项
+
+```bash
+# 指定区域和配置
+python run.py validate -u <url> -r cn-north-1 -p cn
+
+# 开启调试日志
+python run.py validate -u <url> --log-level DEBUG
+
+# 限制验证数量
+python run.py batch -i blogs.json --limit 10
+```
+
+查看完整帮助：`python run.py <command> --help`
 
 ## 项目结构
 
-```
-.
-├── validate.sh                           # 主入口脚本
-├── .kiro/agents/                         # Kiro CLI agent 配置
-│   ├── china-validator.json              # Agent 配置文件
-│   ├── china-validator-prompt.md         # Agent 提示词
-│   └── inject-validation-context.sh      # 上下文注入 hook
-├── unavailable_services.txt              # 中国区不可用服务列表
-├── scripts/
-│   └── generate_reports_json.py          # 生成 reports.json 的脚本
-├── docs/                                 # GitHub Pages 文档目录
-│   ├── index.html                        # 单页应用主页
-│   ├── reports.json                      # 报告元数据
-│   ├── assets/
-│   │   └── app.js                        # 前端交互逻辑
-│   └── reports/                          # 验证报告目录
-│       └── [blog_title_id]/
-│           ├── source.md                 # 原始博客内容
-│           ├── report.md                 # 验证报告
-│           └── validation.log            # 验证日志
-└── README.md                             # 项目说明文档
+```text
+china-regions-content-bot-1/
+├── run.py                           # 主入口程序
+├── scripts/                         # Python 核心模块
+│   ├── validate.py                  # 验证逻辑
+│   ├── batch_validate.py            # 批量处理
+│   ├── content_convert.py           # 内容转换
+│   ├── aws_blog_fetcher.py          # 博客 API
+│   └── generate_reports_json.py     # 报告生成
+├── .kiro/agents/                    # AI Agent 配置
+│   ├── china-validator.json         # Agent 配置
+│   └── china-validator-prompt.md    # 提示词
+├── unavailable_services.txt         # 不可用服务清单
+└── docs/reports/                    # 验证报告输出
 ```
 
 ## 工作流程
 
-1. **内容获取**：使用 `markitdown` 将 URL 指向的博客内容转换为 Markdown 格式
-2. **AI 验证**：调用 `china-validator` custom agent 进行智能分析
-3. **基础验证**：
-   - 识别内容中使用的 AWS 服务
-   - 对比中国区的服务可用性
-   - 评估初步可行性（HIGH/MODERATE/LOW）
-4. **深度验证**（条件触发）：
-   - 针对 HIGH/MODERATE 等级的内容
-   - 实际部署 GitHub 项目或执行教程步骤
-   - 在 AWS 中国区真实环境中测试
-   - 智能修正和重试机制（最多 3 次）
-5. **报告生成**：生成详细的兼容性验证报告
-6. **资源清理**：自动清理所有测试资源
+1. **内容获取** - 从 URL 抓取并转换为 Markdown
+2. **AI 分析** - 识别服务、评估兼容性
+3. **生成报告** - 输出详细验证结果
+
+详见 [技术架构文档](ARCHITECTURE.md)
 
 ## 验证报告
 
-验证报告包含以下内容：
+每次验证会在 `docs/reports/` 下生成：
 
-### 📋 验证概览
-- 内容标题、验证时间、目标区域、验证 ID
+- **source.md** - 原始博客 Markdown 版本
+- **report.md** - 兼容性验证报告
+- **validation.log** - 详细验证日志
 
-### 🔍 基础验证结果
-- 可行性评估等级（🟢 HIGH / 🟡 MODERATE / 🔴 LOW）
-- 识别的 AWS 服务列表
-- 可用/不可用服务统计
-- 评估说明
+### 报告内容
 
-### 🚀 深度验证结果（条件触发）
-- 验证类型（GitHub 项目部署 / 教程步骤验证）
-- 执行状态（✅ 成功 / ⚠️ 部分成功 / ❌ 失败）
-- 遇到的问题和解决方案
-- 修正尝试记录
+- 📋 验证概览（标题、时间、区域、可行性等级）
+- 🔍 服务兼容性分析（可用/不可用服务清单）
+- 📊 可行性评估（HIGH/MODERATE/LOW/NOT_APPLICABLE）
+- 💡 实施建议（步骤、配置、替代方案）
+- ⚠️ 风险与限制（潜在问题和注意事项）
 
-### 📊 最终结论
-- 综合可行性评估
-- 推荐实施方案
-- 风险提示和注意事项
+## 常见问题
 
-## 输出文件
+**Q: 验证一篇博客需要多长时间？**
 
-每次验证会生成唯一的验证 ID（8 位 UUID），所有文件存储在 `./docs/reports/` 目录：
+A: 静态验证通常 30-60 秒，取决于博客长度和网络速度。但如需实际部署验证，可能需要 15-30 分钟。
 
-```
-docs/reports/[blog_title]_[validation_id]/
-├── source.md          # 转换后的 Markdown 内容
-├── report.md          # 验证结果报告
-└── validation.log     # 完整的验证过程日志
-```
+**Q: 如何查看报告？**
 
-验证完成后会自动更新 `docs/reports.json`，用于网页展示。
+A: 直接查看 `docs/reports/` 目录下的 Markdown 文件，或使用 GitHub Pages 托管 Web 界面。
 
-## 技术架构
+**Q: 验证失败怎么办？**
 
-本工具采用 **AI Agent 驱动架构**：
+A: 查看 `validation.log` 了解详细错误。常见问题：URL 不可访问、Kiro CLI 配置错误、目录权限问题。
 
-- **Shell 脚本入口**：命令行接口
-- **Markitdown**：内容提取和转换工具
-- **Kiro CLI Custom Agent**：智能验证引擎
-  - 静态提示词定义验证流程
-  - Hook 机制注入动态上下文
-  - 自主决策和执行能力
-  - 智能错误处理和重试
+**Q: 可以自定义验证逻辑吗？**
 
-## 注意事项
+A: 可以，编辑 `.kiro/agents/china-validator-prompt.md` 文件调整 Agent 行为。
 
-1. **资源清理**：深度验证会在 AWS 中创建实际资源，工具会自动清理，但建议验证后进行检查
-2. **成本控制**：深度验证可能产生 AWS 费用，建议在测试账户中运行
-3. **凭证安全**：确保 AWS 凭证安全，不要在公共环境中运行
-4. **网络访问**：需要能够访问 AWS 中国区和目标 URL
+更多技术细节请参考 [技术架构文档](ARCHITECTURE.md)
+
+## 贡献
+
+欢迎贡献！主要方向：
+
+- 改进 Agent 提示词
+- 更新服务可用性清单
+- 修复 Bug 和改进文档
+
+## 许可证
+
+MIT License
+
+## 相关资源
+
+- [Amazon Q Developer CLI](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line.html)
+- [AWS 中国区域文档](https://docs.amazonaws.cn/)
+- [技术架构文档](ARCHITECTURE.md)

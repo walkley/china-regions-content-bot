@@ -1,4 +1,14 @@
+# HTTP and Web Scraping
 requests>=2.32.5
 beautifulsoup4>=4.12.0
-markdownify>=0.11.6
 lxml>=4.9.0
+
+# Markdown Processing
+markdownify>=0.11.6
+
+# Note: External CLI tools required (not pip-installable):
+# - kiro-cli: Amazon Q Developer CLI
+#   Installation: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-getting-started-installing.html
+# - aws-cli: AWS Command Line Interface
+#   Installation: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+# - uuidgen: UUID generator (usually pre-installed on Unix systems)

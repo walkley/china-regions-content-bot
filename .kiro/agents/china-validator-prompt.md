@@ -94,6 +94,7 @@
 **重要**：
 - 报告中的 `title` 字段和一级标题（`# 标题`）必须使用中文。如果原始博客标题是英文，需要翻译成中文。
 - 从 source.md 中提取博客发布时间（格式如 `by [作者] on 18 NOV 2025`），转换为 `YYYY-MM-DD` 格式填入 `publish_date` 字段。
+- 如果可行性评估标记为不适用，`available_services` 和 `unavailable_services` 均设为 `0`
 
 ```markdown
 ---

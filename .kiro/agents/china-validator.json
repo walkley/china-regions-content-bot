@@ -1,7 +1,7 @@
 {
   "name": "china-validator",
   "description": "AWS中国区域兼容性验证专家",
-  "prompt": "file://./china-validator-prompt-test.md",
+  "prompt": "file://./china-validator-prompt.md",
   "tools": ["*"],
   "allowedTools": ["*"],
   "toolsSettings": {
